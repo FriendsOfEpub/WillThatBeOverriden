@@ -1,0 +1,87 @@
+/* Kobo iOS Default CSS (contains Kobo-nightreading.css) */
+
+html
+{
+	height: 100% !important;
+	margin: 0 !important;
+}
+body
+{
+	line-height:	1.575em;
+	margin:			0 !important;
+	height:			100% !important;
+	padding-top: 0 !important;
+}
+h1, h2, h3, h4, h5, h6
+{
+    line-height: inherit;
+}
+.KBHeading
+{
+	margin-top:			0 !important;
+	display:		block !important;
+	text-align:		center !important;
+	font-size:		1.33em !important;
+	letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+}
+.KBSubheading
+{
+	margin-top:			0 !important;
+	display:		block !important;
+	text-align:		center !important;
+	font-size:		1.25em !important;
+}
+.KBSubsubheading
+{
+	margin-top:			0 !important;
+	font-size:		1em !important;
+	font-weight:	bold !important;
+}
+.KBHeading, KBSubheading, KBSubsubheading
+{
+    font-family:	'Georgia' !important;
+}
+a:link
+{
+	color: #1DAEC7 !important;
+}
+a:visited
+{
+	color: #1DAEC7 !important;
+}
+a:hover
+{
+	color: #1DAEC7 !important;
+}
+a:active
+{
+	color: #1DAEC7 !important;	
+}
+p
+{
+ padding-top: 0.15em !important;
+ padding-bottom: 0.15em !important;
+}
+div#book-inner p, div#book-inner div
+{ 
+    font-size: 1.0em;
+}
+
+/* Kobo-nightreading.css */
+
+body
+{
+	background-color: #000000 !important;
+}
+
+div#book-inner a, div#book-inner p > a, div#book-inner div > a, div#book-inner span > a
+{
+	color: #1DAEC7 !important;
+}
+
+div#book-inner, div#book-inner p, div#book-inner div
+{
+	background-color: #000000 !important;
+    color: #BBBBBB !important;
+}
