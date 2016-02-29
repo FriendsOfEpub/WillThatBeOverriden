@@ -1,0 +1,167 @@
+@font-face {
+	font-family: 'BN Amasis';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../../Fonts/Amasis.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Amasis';
+	font-weight: bold;
+	font-style: normal;
+	src: url(../../Fonts/Amasis-B.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Amasis';
+	font-weight: normal;
+	font-style: italic;
+	src: url(../../Fonts/Amasis-I.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Amasis';
+	font-weight: bold;
+	font-style: italic;
+	src: url(../../Fonts/Amasis-BI.ttf) format('truetype');
+}
+.amasis, .Amasis {
+	font-family: 'BN Amasis', arial, sans-serif;
+}
+
+@font-face {
+	font-family: 'BN Ascender Sans';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../../Fonts/AscenderSans.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Ascender Sans';
+	font-weight: bold;
+	font-style: normal;
+	src: url(../../Fonts/AscenderSans-B.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Ascender Sans';
+	font-weight: normal;
+	font-style: italic;
+	src: url(../../Fonts/AscenderSans-I.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Ascender Sans';
+	font-weight: bold;
+	font-style: italic;
+	src: url(../../Fonts/AscenderSans-BI.ttf) format('truetype');
+}
+.AscenderSans, .ascendersans {
+	font-family: 'BN Ascender Sans', arial, sans-serif;
+}
+
+@font-face {
+	font-family: 'BN Century Schoolbook';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../../Fonts/CenturySchoolbook.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Century Schoolbook';
+	font-weight: bold;
+	font-style: normal;
+	src: url(../../Fonts/CenturySchoolbook-B.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Century Schoolbook';
+	font-weight: normal;
+	font-style: italic;
+	src: url(../../Fonts/CenturySchoolbook-I.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Century Schoolbook';
+	font-weight: bold;
+	font-style: italic;
+	src: url(../../Fonts/CenturySchoolbook-BI.ttf) format('truetype');
+}
+.CenturySchoolbook, .centuryschoolbook {
+	font-family: 'Century Schoolbook', arial, sans-serif;
+}
+
+@font-face {
+	font-family: 'BN Gill Sans';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../../Fonts/GillSans.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Gill Sans';
+	font-weight: bold;
+	font-style: normal;
+	src: url(../../Fonts/GillSans-B.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Gill Sans';
+	font-weight: normal;
+	font-style: italic;
+	src: url(../../Fonts/GillSans-I.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Gill Sans';
+	font-weight: bold;
+	font-style: italic;
+	src: url(../../Fonts/GillSans-BI.ttf) format('truetype');
+}
+.gillsans, .GillSans {
+	font-family: 'BN Gill Sans', arial, sans-serif;
+}
+
+@font-face {
+	font-family: 'BN Joanna';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../../Fonts/Joanna.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Joanna';
+	font-weight: bold;
+	font-style: normal;
+	src: url(../../Fonts/Joanna-B.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Joanna';
+	font-weight: normal;
+	font-style: italic;
+	src: url(../../Fonts/Joanna-I.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Joanna';
+	font-weight: bold;
+	font-style: italic;
+	src: url(../../Fonts/Joanna-BI.ttf) format('truetype');
+}
+.Joanna, .joanna {
+	font-family: 'BN Joanna', arial, sans-serif;
+}
+
+@font-face {
+	font-family: 'BN Times New Roman';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../../Fonts/TimesNewRoman.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Times New Roman';
+	font-weight: bold;
+	font-style: normal;
+	src: url(../../Fonts/TimesNewRoman-B.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Times New Roman';
+	font-weight: normal;
+	font-style: italic;
+	src: url(../../Fonts/TimesNewRoman-I.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'BN Times New Roman';
+	font-weight: bold;
+	font-style: italic;
+	src: url(../../Fonts/TimesNewRoman-BI.ttf) format('truetype');
+}
+.TimesNewRoman, .timesnewroman {
+	font-family: 'BN Times New Roman', arial, sans-serif;
+}

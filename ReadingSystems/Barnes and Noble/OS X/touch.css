@@ -1,0 +1,15 @@
+﻿::-webkit-scrollbar-button {
+	display:none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    -webkit-border-image: url(../images/scroll-small-gray-thumb.png) 5 0 5 0;
+    border-color: transparent;
+    border-width: 5px 0;
+    min-height: 10px;
+}

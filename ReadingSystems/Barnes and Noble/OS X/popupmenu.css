@@ -1,0 +1,223 @@
+
+div.bn-popup-menu {
+	border: solid 4px white;
+	margin: 0;
+	min-width: 100px;
+	opacity: 0;
+	position: absolute;
+	visibility: hidden;
+	z-index: 10001; /* so we can have popup menus and sub-menus */
+	-webkit-border-radius: 7px;
+}
+div.bn-popup-menu:not(.dropdown-menu) {
+/* 	-webkit-transform: scale(0.0); */
+	-webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.9);
+	margin: 10px 0 10px 10px;
+}
+.os-windows div.bn-popup-menu:not(.dropdown-menu) {
+	-webkit-box-shadow: -1.5px -1.5px 9px rgba(0, 0, 0, 0.9);
+}
+
+div.bn-popup-menu.dropdown-menu {
+	border: none;
+	margin: -1px 0 0 0;
+}
+div.bn-popup-menu.dropdown-menu.show {
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+div.bn-popup-menu.submenu {
+	margin: -22px 0 0px 0px;
+}
+div.bn-popup-menu.show {
+	opacity: 1;
+	visibility: visible;
+}
+/*
+Bye-bye boing. It was a fun run.
+div.bn-popup-menu.show:not(.dropdown-menu) {
+	-webkit-transform: scale(1.0);
+	-webkit-transform-origin: top center;
+	-webkit-animation-duration: 100ms;
+	-webkit-animation-name: boing;
+	-webkit-animation-timing-function: ease-in-out;
+}
+*/
+
+div.bn-popup-menu div.container { 
+	border: 1px solid #dcdcdc;
+	-webkit-border-radius: 2px; 
+	position: relative;
+	background-color: #EAEFF1;
+	overflow: hidden;
+}
+
+div.bn-popup-menu.dropdown-menu div.container { 
+	-webkit-border-top-left-radius: 0; 
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-left-radius: 5px; 
+	-webkit-border-bottom-right-radius: 5px;
+	background-color: white;
+	width: 149px;
+	border-color: #999da5;
+}
+div.bn-popup-menu.dropdown-menu.slim div.container { 
+	width: 99px;
+}
+
+div.bn-popup-menu > .arrow {
+	background-image: url(../images/popup_arrow.png);
+	position: absolute;
+	height: 35px;
+	width: 25px;
+	z-index: 10002;
+}
+
+div.bn-popup-menu.no-arrow > .arrow {
+	display: none;
+}
+
+div.bn-popup-menu > .arrow.pointing-up {
+	 -webkit-transform: rotate(90deg);
+	 top:-29px;
+}
+div.bn-popup-menu > .arrow.pointing-down {
+	 -webkit-transform: rotate(270deg);
+	 bottom:-29px;
+}
+div.bn-popup-menu > .arrow.pointing-left {
+	left: -24px;
+}
+div.bn-popup-menu > .arrow.pointing-right {
+	right: -24px;
+	 -webkit-transform: rotate(180deg);
+}
+
+
+div.bn-popup-menu > .container > .bn-popup-menu-item {
+	position:relative;
+	display:block;
+	padding:8px;
+	line-height:14px;
+	color: #333;
+	/* 2px and margins for proper display when the last item is hidden */
+	border-bottom: solid 1px #cdcecf;
+	border-top: solid 1px rgba(255,255,255,0.1)
+	white-space:nowrap;
+}
+
+div.bn-popup-menu > .container > .bn-popup-menu-item.hidden {
+	display:none;
+}
+
+div.bn-popup-menu > .container > .bn-popup-menu-item.has-submenu {
+	padding-right:32px;
+}
+
+div.bn-popup-menu > .container .bn-popup-menu-item:first-child {
+	border-top: none;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+}
+div.bn-popup-menu.dropdown-menu > .container .bn-popup-menu-item:first-child {
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-top-right-radius: 0;
+}
+
+div.bn-popup-menu > .container .bn-popup-menu-item:last-child {
+	border-bottom: none;
+	-webkit-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+}
+
+div.bn-popup-menu > .container > .bn-popup-menu-item.has-submenu .submenu-button {
+	position:absolute;
+	right:8px;
+	top:6px;
+	width:20px;
+	height:20px;
+	background-image: url(../images/sprite_icons_sm-20x20_v2.png);
+	background-position-y: -360px;
+}
+div.bn-popup-menu > .container > .bn-popup-menu-item.has-submenu .submenu-button:hover {
+	background-position-y: -340px;
+}
+
+div.bn-popup-menu > .container > .bn-popup-menu-item > img {
+	width:16px;
+	height:16px;
+	margin: 0px 6px 0px -2px;
+	border:none;
+	vertical-align:middle;
+}
+
+div.bn-popup-menu > .container > .bn-popup-menu-item.submenu-open,
+div.bn-popup-menu > .container > .bn-popup-menu-item.normal-menu-item:hover {
+	text-decoration: none;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(218,224,229)), to(rgb(154,178,202)));
+}
+div.bn-popup-menu > .container > .bn-popup-menu-item.normal-menu-item:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#429638), to(#01703b));
+	color: white;
+}
+
+div.bn-popup-menu > .container > .bn-popup-menu-item.pressed {
+	text-decoration:none;
+	background-color:#429544;
+	color:#ffffff;
+	text-shadow: none;
+}
+body.tab-to-links div.bn-popup-menu > .container > .bn-popup-menu-item.keyboard-selection {
+	background-color: #9DD2F1;
+	outline: none;
+}
+div.bn-popup-menu > .container > .bn-popup-menu-item.keyboard-selection {
+	outline: none;
+}
+div.bn-popup-menu > .container > .bn-popup-menu-item > .icon.px20 {
+	margin: -2px 3px 0px -4px;
+}
+.hover-curtain {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/* For displaying checkmark to the right of a selected menu item */
+div.bn-popup-menu > .container > .bn-popup-menu-item.checked {
+	padding-right: 30px;
+}
+div.bn-popup-menu.dropdown-menu.slim > .container > .bn-popup-menu-item.checked {
+	padding-right: 20px;
+}
+ul#two-book-view-options .checkmark,
+div.bn-popup-menu .bn-popup-menu-item.checked .checkmark {
+	visibility:hidden;
+	position: absolute;
+	right: 7px;
+	top: 6px;
+}
+ul#two-book-view-options .checkmark { float: none; }
+ul#two-book-view-options .selected .checkmark,
+div.bn-popup-menu .bn-popup-menu-item.checked.selected .checkmark {
+	visibility: visible;
+	background-position-y: -220px;
+}
+
+
+/* Two book view popup menu with gray background */
+div.bn-popup-menu.popup-bg-gray > .container > div.bn-popup-menu-item,
+div.bn-popup-menu.popup-bg-gray > .container > div.bn-popup-menu-item:hover,
+div.bn-popup-menu.popup-bg-gray > .container > div.bn-popup-menu-item:active {
+	background-color: #ddd;
+	background-image: none;
+	color: inherit;
+}
+div.bn-popup-menu.popup-bg-gray > .arrow {
+	background-image: url(../images/popup_arrow_gray.png);
+}
+div.bn-popup-menu.popup-bg-gray > .container > div.bn-popup-menu-item {
+	padding: 0;
+}

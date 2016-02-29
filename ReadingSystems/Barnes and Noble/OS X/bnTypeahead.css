@@ -1,0 +1,27 @@
+.typeahead-container {
+	position: absolute;
+	z-index: 1000000;
+}
+.typeahead {
+	background-color: white;
+	border: 1px solid #dbdad6;
+	-webkit-border-bottom-left-radius: 2px; 
+	-webkit-border-bottom-right-radius: 2px;
+	font-size: 12px;
+	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.4);
+}
+/*
+.typeahead div:nth-child(odd) {
+	background-color: #f9f7f3;
+}
+*/
+.typeahead div {
+	cursor: pointer;
+	padding: 4px;
+}
+.typeahead div:hover {
+	text-decoration: underline;
+}
+.typeahead div.selected {
+	background-color: #e9e3d4;
+}
