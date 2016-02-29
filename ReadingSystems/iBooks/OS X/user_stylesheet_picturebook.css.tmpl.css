@@ -1,0 +1,18 @@
+{{embed base}}
+
+html {
+  -webkit-touch-callout: none;
+  position: relative;
+}
+
+.-epub-media-overlay-active{
+    color: rgb(40, 84, 153);
+}
+
+.hoverHand{
+    cursor: pointer;
+}
+
+body {
+    overflow:hidden;
+}

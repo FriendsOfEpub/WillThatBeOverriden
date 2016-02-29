@@ -1,0 +1,9 @@
+@namespace epub "http://www.idpf.org/2007/ops";
+@namespace svg "http://www.w3.org/2000/svg";
+
+/* Hide soundtrack <audio> tags from ever showing up */
+audio[epub|type~="ibooks:soundtrack"] {
+  display: none !important;
+  /* display: none; doesn't seem to actually work for some reason, so hide it another way */
+  height: 0 !important;
+}

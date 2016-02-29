@@ -1,0 +1,274 @@
+{{embed base}}
+
+{{range fonts}}
+{{range .}}
+@font-face {
+  font-family: iBooks_{{.$parent.$key}};
+  src: local('{{.}}');
+  font-weight: {{.$key}};
+}
+{{end range .}}
+{{end range fonts}}
+
+.calibre > div, .calibre1 > div {
+  position: static !important;
+}
+
+/* Themes */
+{{range themes}}
+
+/* gaiji support */
+{{if $parent.respectImageSizeSelector}}
+    {{if $parent.respectImageSizeSelectorIsGaiji}}
+        {{if css_gaijiImageFilter}}
+        :root[__ibooks_internal_theme={{.css_themeIdentifier}}] img{{.$parent.respectImageSizeSelector}} {
+            -webkit-filter: {{.css_gaijiImageFilter}};
+            {{if ! css_themeShouldInvertContent}}
+            background-color: transparent !important;
+            {{end css_themeShouldInvertContent}}
+        }
+        {{end css_gaijiImageFilter}}
+    {{end respectImageSizeSelectorIsGaiji}}
+{{end respectImageSizeSelector}}
+
+
+/* content body */
+{{if css_themeShouldInvertContent}}
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] {
+    background-color: {{.css_themeContentBackgroundColor}} !important;
+    }
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] * {
+    background-color: transparent !important;
+    color: {{.css_themeContentTextColor}} !important;
+    }
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] svg|text {
+    fill: {{.css_themeContentTextColor}} !important;
+    stroke: none !important;
+    }
+{{else}}
+    /* apply body styles to the root too in case the document has no body */
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}],
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] body {
+    background-color: {{.css_themeContentBackgroundColor}};
+    color: {{.css_themeContentTextColor}};
+    }
+{{end css_themeShouldInvertContent}}
+
+/* Links - colors from theme */
+:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a {
+color: #{{.css_themeLinkColor}};
+}
+:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:link,
+:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:visited,
+:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:link *,
+:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:visited * {
+color: #{{.css_themeLinkColor}} !important;
+}
+:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:active,
+:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:active * {
+color: #{{.css_themeLinkColor}} !important;
+}
+{{end range themes}}
+/* End Themes */
+
+html {
+  -webkit-touch-callout: none;
+  margin: 0 !important;
+  padding: 0 !important;
+{{if style}}
+{{if useColumns}}
+  -webkit-column-width: {{.pageWidth}}px;
+  -webkit-column-gap: {{.gutter}}px;
+  width: {{.width}}px;
+  height: {{.pageHeight}}px;
+{{else}}
+  width: auto !important;
+  height: auto !important;
+{{end useColumns}}
+{{end style}}
+  -webkit-line-box-contain: block glyphs replaced;
+}
+
+body {
+  padding: 0 0 !important;
+  overflow: hidden;
+  text-align: {{.justification}};
+  
+  -webkit-locale: '{{.language}}';
+  -webkit-hyphens: {{.hyphens}};
+  -webkit-hyphenate-character: '-';
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-lines: 2;
+  text-rendering: {{.textRendering}};
+
+{{if isJapanese}}
+  /* <rdar://problem/12986020> Turn on break-word by default for Japanese */
+  word-wrap: break-word;
+  -webkit-line-box-contain: block inline replaced;
+  line-break: strict;
+  -webkit-line-break: strict;
+{{end isJapanese}}
+
+{{if isChinese}}
+    font-family: {{.defaultChineseFont}};
+{{end isChinese}}
+}
+
+/* margins */
+{{if isScrollMode}}
+{{if scrollModeIsHorizontal}}
+/* unpaginated and paginated horizontal scroll */
+body {
+  /* left and right margins of chapters, also gaps for paginated content */
+  margin: 0 40px !important;
+}
+:root[__ibooks_writing_mode^="vertical-"] body {
+  /* unpaginated vertical text needs to be constrained */
+  height: {{.pageHeight}}px !important;
+}
+
+{{else}}
+/* unpaginated vertical scroll */
+:root[__ibooks_writing_mode^="horizontal-"] body {
+  {{if isPhone}}
+  margin: 100px 0 50px 0 !important; /* iPhone */
+  {{else }}
+  {{if isMac}}
+  margin: 0 0 0 0 !important; /* OS X */
+  {{else}}
+  margin: 220px 0 100px 0 !important; /* iPad */
+  {{end isMac}}
+  {{end isPhone}}
+}
+/* paginated vertical scroll; top/bottom margin is per-page */
+:root[__ibooks_writing_mode^="vertical-"] body {
+  margin: 60px 0 !important;
+}
+{{end scrollModeIsHorizontal}}
+{{else}}
+/* book mode */
+body {
+  -webkit-margin-start: 0px !important;
+  -webkit-margin-end: 0px !important;
+  -webkit-margin-before: 0 !important;
+  -webkit-margin-after: 0 !important;
+}
+{{end isScrollMode}}
+
+parsererror { white-space: normal !important; }
+
+a { text-decoration: none; }
+pre { white-space: pre-wrap; }
+@page { margin: 0 0 !important; }
+table,ol,il { text-align: -webkit-auto; }
+h1,h2,h3,h4,h5,h6 {
+{{if isJapanese}}
+  /* <rdar://problem/13070417> don't set text-align */
+{{else}}
+  text-align: -webkit-auto;
+{{end isJapanese}}
+  text-rendering: optimizelegibility;
+}
+
+/* Begin Ted */
+img {
+  max-height: 95% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  object-fit: contain;
+  page-break-inside: avoid;
+}
+
+svg {
+  max-height: 95% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  object-fit: contain;
+  page-break-inside: avoid;
+}
+
+audio {
+  max-height: 95% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  object-fit: contain;
+  page-break-inside: avoid;
+}
+
+video {
+  max-height: 95% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  object-fit: contain;
+  page-break-inside: avoid;
+}
+/* End Ted */
+
+/* Divs are also used to size images so make sure the authors get what they intended */
+/* which is for the images boxed in them to be completely visible on screen */
+div {
+    max-width: 100%;
+}
+
+aside[epub|type~="footnote"] {
+  display: none !important;
+}
+
+{{if style}}
+td {
+  max-width: {{.tdClamp}}px !important;
+}
+
+{{if fontFamily}}
+body {
+  line-height: {{.lineHeight}};
+  font-family: 'iBooks_{{.fontFamily}}'{{range fontFallbacks}}, '{{.}}'{{end}} !important;
+}
+math {
+  font-family: STIXGeneral, Symbol, 'iBooks_{{.fontFamily}}'{{range fontFallbacks}}, '{{.}}'{{end}} !important;
+}
+{{end fontFamily}}
+{{end style}}
+
+ruby > rt, ruby > rp {
+    -webkit-user-select: none;
+}
+
+/* centering hack to support Calibre-generated vertical centered documents */
+:root:not([__ibooks_has_multiple_pages]) *[__ibooks_centering_hack^="horizontal-"] {
+  min-width: {{.pageWidth}}px;
+}
+:root:not([__ibooks_has_multiple_pages]) *[__ibooks_centering_hack^="vertical-"] {
+  min-height: {{.pageHeight}}px;
+}
+
+/* fix documents that abuse inline-block */
+:root[__ibooks_has_multiple_pages] *[__ibooks_has_inline_block] {
+  display: block !important;
+}
+
+/* fix writing mode */
+:root[__ibooks_has_multiple_pages] span[__ibooks_has_inline_block] {
+  -webkit-writing-mode: inherit !important;
+}
+
+/* allow breaking of words on headers and anchors as they tend to be larger font size or contain longer words */
+a, h1, h2, h3, h4, h5, h6 {
+  word-break: break-word !important;
+}
+
+/* forced font overrides */
+{{if fontFamily}}
+p[__ibooks_font_override], span[__ibooks_font_override], div[__ibooks_font_override] 
+{ 
+  font-family: 'iBooks_{{.fontFamily}}'{{range fontFallbacks}}, '{{.}}'{{end}} !important;
+}
+/* forced justification */
+p[__ibooks_align_override], span[__ibooks_align_override], div[__ibooks_align_override] 
+{ 
+  text-align: {{.justification}} !important;
+}
+{{end fontFamily}}
+
+* { -webkit-font-smoothing: subpixel-antialiased }
