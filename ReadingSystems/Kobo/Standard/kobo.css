@@ -1,0 +1,90 @@
+/* This is added in <head></head> of every xhtml file 
+
+<!-- kobo-style -->
+<link href="css/kobo.css" rel="stylesheet" type="text/css"/>
+<script src="js/kobo.js" type="text/javascript"/>
+<style id="kobostylehacks" type="text/css">div#book-inner p, div#book-inner div { font-size: 1.0em; } a { color: black; } a:link, a:visited, a:hover, a:active { color: blue; } div#book-inner * { margin-top: 0 !important; margin-bottom: 0 !important;}</style>
+
+*/
+
+/VERSION:1/ 
+html { 	
+    height: 100% !important; 	
+    margin: 0 !important; 
+}
+
+img { 	
+    max-width: 100%; 	
+    max-height: 100%; 	
+    overflow: none; 
+}
+
+body { 	
+    font-size:		14pt; 	
+    line-height:	1.575em !important; 	
+    font-family:	'Georgia' !important; 	
+    margin:			0 !important; 	
+    height:			100% !important; 	
+    word-wrap: break-word !important; 
+} 
+
+.KBHeading, h1 { 	
+    margin-top:			0 !important; 	
+    display:		block !important; 	
+    text-align:		center !important; 	
+    font-family:	'Georgia' !important; 	
+    font-size:		1.33em !important; 	
+    text-transform: uppercase !important; 	
+    letter-spacing: 0.1em !important; 
+} 
+
+.KBSubheading, h2 { 	
+    margin-top:			0 !important; 	
+    display:		block !important; 	
+    text-align:		center !important; 	
+    font-family:	'Georgia' !important; 	
+    font-size:		1.25em !important; 
+} 
+
+.KBSubsubheading, h3, h4, h5, h6 { 	
+    margin-top:			0 !important; 	
+    font-size:		1em !important; 	
+    font-family:	'Georgia' !important; 	
+    font-weight:	bold !important; 
+}
+
+a:link { 	
+    color: #1DAEC7 !important; 
+} 
+
+a:visited { 	
+    color: #1DAEC7 !important; 
+} 
+
+a:hover { 	
+    color: #1DAEC7 !important; 
+} 
+
+a:active { 	
+    color: #1DAEC7 !important;	 
+}
+
+p, div { 	
+    font-size: 14pt; 	
+    line-height: 1.475em !important;  	
+    text-indent: 0 !important; 	
+    margin: 0 !important; 	
+    padding-top: 0 !important; 	
+    padding-bottom: 1.0em !important; 	
+    text-align:		left !important; 
+}
+
+.KBIcon { 	
+    padding-top: 0 !important; 
+}
+
+.KBFooter { 	
+    position: static !important; 	
+    margin-left: auto !important; 	
+    padding-top: 10% !important; 
+}
