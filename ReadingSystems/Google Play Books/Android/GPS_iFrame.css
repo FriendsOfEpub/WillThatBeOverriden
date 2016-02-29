@@ -1,0 +1,395 @@
+body {
+    font-size: 18px;
+    line-height: 1.5;
+}
+@page {
+    margin: 0px;
+    padding: 0px;
+}
+.gb-segment {
+    margin: 0px;
+    padding: 0px;
+}
+.gb-segment div {
+    text-align: center;
+    width: auto;
+    height: 99%;
+    margin: 0px;
+    color: blue;
+}
+.gb-segment img {
+    max-width: 100%;
+    height: 100%;
+}
+html,
+body,
+.gb-segment {
+    border: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.gb-page {
+    position: absolute;
+}
+.gb-page-container {
+    position: absolute;
+    overflow: hidden;
+}
+body.sepia-mode {
+    background-color: rgb(236, 225, 202) !important;
+    color: rgb(100, 80, 50) !important;
+}
+body.sepia-mode * {
+    background-color: transparent !important;
+    color: rgb(100, 80, 50) !important;
+}
+body.sepia-mode a:link {
+    color: -webkit-link !important;
+}
+body.night-mode {
+    background-color: rgb(0, 0, 0) !important;
+    color: rgb(204, 204, 204) !important;
+}
+body.night-mode * {
+    background-color: transparent !important;
+    color: rgb(204, 204, 204) !important;
+}
+body.night-mode a:link,
+body.footnote-night-mode a:link {
+    color: rgb(3, 155, 229) !important;
+}
+body.footnote-night-mode {
+    background-color: rgb(33, 33, 33) !important;
+    color: rgb(204, 204, 204) !important;
+}
+body.footnote-night-mode * {
+    background-color: transparent !important;
+    color: rgb(204, 204, 204) !important;
+}
+.gb-segment pre {
+    white-space: pre-wrap !important;
+}
+#gb-container {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+}
+#gb-content2,
+#gb-content {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+}
+#gb-content > .gb-chapter {
+    border: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+}
+.gb-segment {
+    word-wrap: break-word !important;
+}
+.gb-segment svg {
+    word-wrap: normal !important;
+}
+math {
+    display: inline;
+    text-indent: 0px;
+}
+math[display="block"] {
+    display: block;
+    text-align: center;
+}
+mfrac {
+    vertical-align: -50%;
+    border-collapse: collapse;
+    display: inline-block !important;
+}
+mfrac > * {
+    display: block !important;
+}
+mfrac > * + * {
+    vertical-align: top;
+    display: inline-block !important;
+}
+mfrac:not([linethickness="0"]) >:first-child {
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+msub >:nth-child(2),
+msubsup >:nth-child(2),
+mmultiscripts >:nth-child(2n+2),
+mmultiscripts > mprescripts ~:nth-child(2n+3) {
+    font-size: 0.8em;
+    vertical-align: sub;
+}
+msup >:nth-child(2),
+msubsup >:nth-child(3),
+mmultiscripts >:nth-child(2n+3),
+mmultiscripts > mprescripts ~:nth-child(2n+2) {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+mprescripts::after {
+    content: ';';
+}
+munder,
+mover,
+munderover {
+    flex-direction: column;
+    display: inline-flex !important;
+}
+munder >:nth-child(2),
+munderover >:nth-child(2) {
+    font-size: 0.8em;
+    order: 1;
+}
+mover >:nth-child(2),
+munderover >:nth-child(3) {
+    font-size: 0.8em;
+    order: -1;
+}
+munder {
+    vertical-align: text-top;
+}
+mover {
+    vertical-align: text-bottom;
+}
+munderover {
+    vertical-align: middle;
+}
+msqrt,
+mroot {
+    margin-left: 0.5em;
+    vertical-align: middle;
+    border-top-style: solid;
+    border-top-width: thin;
+    display: inline-flex !important;
+}
+msqrt::before,
+mroot::before {
+    margin-left: -0.5em;
+    content: '√';
+}
+mroot >:nth-child(2) {
+    margin-right: 0.25em;
+    margin-left: -0.75em;
+    font-size: 0.8em;
+    order: -1;
+}
+menclose {
+    border-collapse: separate;
+    border-spacing: 0.4ex 0px;
+    display: inline-table !important;
+}
+menclose[notation*="top"],
+menclose[notation*="actuarial"] {
+    border-top-style: solid;
+    border-top-width: thin;
+}
+menclose[notation*="bottom"],
+menclose[notation*="madruwb"] {
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+menclose[notation*="right"],
+menclose[notation*="actuarial"],
+menclose[notation*="madruwb"] {
+    border-right-style: solid;
+    border-right-width: thin;
+}
+menclose[notation*="left"] {
+    border-left-style: solid;
+    border-left-width: thin;
+}
+menclose[notation*="box"],
+menclose[notation*="roundedbox"],
+menclose[notation*="circle"] {
+    border: thin solid;
+}
+menclose[notation*="roundedbox"] {
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+}
+menclose[notation*="circle"] {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+menclose[notation*="horizontalstrike"] {
+    text-decoration: line-through;
+}
+mtable {
+    vertical-align: middle;
+    display: inline-table !important;
+}
+mtr {
+    display: table-row !important;
+}
+mtd {
+    padding: 0px 0.5ex;
+    display: table-cell !important;
+}
+mspace {
+    margin: 0.2em;
+}
+mi {
+    font-style: italic;
+}
+mo {
+    margin-right: 0.2em;
+    margin-left: 0.2em;
+}
+ms::before,
+ms::after {
+    content: '"';
+}
+ms[lquote]::before {
+    content: attr(lquote);
+}
+ms[rquote]::after {
+    content: attr(rquote);
+}
+[mathvariant="bold"],
+[mathvariant="bold-italic"],
+[mathvariant="bold-sans-serif"],
+[mathvariant="sans-serif-bold-italic"] {
+    font-weight: bold;
+    font-style: normal;
+}
+[mathvariant="monospace"] {
+    font-style: normal;
+    font-family: monospace;
+}
+[mathvariant="sans-serif"],
+[mathvariant="bold-sans-serif"],
+[mathvariant="sans-serif-italic"],
+[mathvariant="sans-serif-bold-italic"] {
+    font-style: normal;
+    font-family: sans-serif;
+}
+[mathvariant="italic"],
+[mathvariant="bold-italic"],
+[mathvariant="sans-serif-italic"],
+[mathvariant="sans-serif-bold-italic"] {
+    font-style: italic;
+}
+[mathvariant="normal"] {
+    font-style: normal;
+}
+mphantom {
+    visibility: hidden;
+}
+merror {
+    outline: red solid thin;
+}
+merror::before {
+    content: 'Error: ';
+}
+semantics >:first-child {
+    display: inline;
+}
+annotation,
+annotation-xml {
+    display: none !important;
+    font-family: monospace;
+}
+math:active > semantics >:first-child,
+math:active > semantics >:first-child {
+    display: none !important;
+}
+math:active annotation:first-of-type {
+    display: inline !important;
+}
+.gb-segment.gb-horizontal[ocean-reopened-element],
+.gb-segment.gb-horizontal [ocean-reopened-element] {
+    text-indent: 0px !important;
+    border-top-width: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+li[ocean-reopened-element] {
+    list-style-type: none !important;
+}
+.gb-segment.gb-horizontal[ocean-sliced-element],
+.gb-segment.gb-horizontal [ocean-sliced-element] {
+    border-bottom-width: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+.gb-segment.gb-vertical[ocean-reopened-element],
+.gb-segment.gb-vertical [ocean-reopened-element] {
+    text-indent: 0px !important;
+    border-right-width: 0px !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+}
+.gb-segment.gb-vertical[ocean-sliced-element],
+.gb-segment.gb-vertical [ocean-sliced-element] {
+    border-left-width: 0px !important;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+}
+@font-face {
+    src: url(http://_puobwaaaeaj.localhost/fonts/literata-regular.otf);
+    font-family: gpb-literata, literata;
+}
+@font-face {
+    src: url(http://_puobwaaaeaj.localhost/fonts/literata-italic.otf);
+    font-style: italic;
+    font-family: gpb-literata, literata;
+}
+@font-face {
+    src: url(http://_puobwaaaeaj.localhost/fonts/literata-bold.otf);
+    font-weight: bold;
+    font-family: gpb-literata, literata;
+}
+@font-face {
+    src: url(http://_puobwaaaeaj.localhost/fonts/literata-bold-italic.otf);
+    font-style: italic;
+    font-weight: bold;
+    font-family: gpb-literata, literata;
+}
+body {
+    font-family: gpb-literata, literata;
+}
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    src: url(http://_puobwaaaeaj.localhost/fonts/literata-regular.otf);
+    font-family: gpb-literata;
+}
+@font-face {
+    font-style: normal;
+    font-weight: bold;
+    src: url(http://_puobwaaaeaj.localhost/fonts/literata-bold.otf);
+    font-family: gpb-literata;
+}
+@font-face {
+    font-style: italic;
+    font-weight: normal;
+    src: url(http://_puobwaaaeaj.localhost/fonts/literata-italic.otf);
+    font-family: gpb-literata;
+}
+@font-face {
+    font-style: italic;
+    font-weight: bold;
+    src: url(http://_puobwaaaeaj.localhost/fonts/literata-bold-italic.otf);
+    font-family: gpb-literata;
+}
+.-webkit-media-overlay-active,
+.media-overlay-active {
+    background-color: yellow !important;
+    color: black !important;
+    border-radius: 0.4em;
+}

@@ -1,0 +1,363 @@
+/* Google iOS */
+
+/* default.css */
+
+.flow {
+  margin: 0em;
+}
+.flow .pagebreak {
+  page-break-before: always;
+}
+.flow p {
+  text-align: left;
+  text-indent: 0em;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+.flow .gstxt_sup {
+  font-size: 75%;
+  position: relative;
+  bottom: 0.5em;
+}
+.flow .gstxt_sub {
+  font-size: 75%;
+  position: relative;
+  top: 0.3em;
+}
+.flow .gstxt_hlt {
+  background-color: yellow;
+}
+.flow div.gtxt_inset_box {
+  padding: 1em 1em 0.5em 1em;
+  margin: 1em 1em 1em 1em;
+  border: 1px black solid;
+}
+.flow div.gtxt_footnote {
+  padding: 0 5 0 5;
+  border: 1px black dotted;
+}
+.flow .gstxt_underline {
+  text-decoration: underline;
+}
+.flow .gtxt_heading {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 150%;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.flow .gtxt_h1_heading {
+  text-align: center;
+  font-size: 135%;
+  font-weight: bold;
+}
+.flow .gtxt_h2_heading {
+  font-size: 120%;
+  font-weight: bold;
+}
+.flow .gtxt_h3_heading {
+  font-weight: bold;
+}
+.flow .gtxt_lineated {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+}
+.flow .gtxt_lineated_code {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+.flow .gtxt_quote {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gtxt_list_entry {
+  margin-left: 2ex;
+  text-indent: -2ex;
+}
+.flow .gimg_graphic {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gimg_table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow span,p {
+  font-family: inherit;
+}
+
+/* extra.css */
+
+pre {
+  white-space: pre-wrap;
+}
+td {
+  word-break: normal;
+  /* Disallow padding for table cells. */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+a:link {
+  text-decoration: inherit;
+  color: blue;
+}
+a:visited {
+  text-decoration: inherit;
+  color: blue;
+}
+img {
+  /* Some publisher CSS sets max-height on images, which can be problematic.
+     Undo that here.
+     TODO: Remove this style rule when the bug with max-height on images
+     is fixed. */
+  max-height: none !important;
+}
+/* Attributes that used to be applied to <body> are now being applied to
+   the .gb-segment class, so apply our fixups to both. */
+body, .gb-segment {
+  /* Some publisher CSS sets body margins to values that
+     can cause pages to be clipped, so we override that
+     with our own value. */
+  margin: 0;
+  /* Allow words to break in the middle if required to avoid horizontal
+     overflow when wrapping text. */
+  word-wrap: break-word;
+  /* If a publisher turns on "webkit-hyphens: auto" the iOS webview will
+     add some hyphens, which is fine except if the insertion point is the
+     last word on a page (in which case the single-page post-paginated
+     version will be displayed without the hyphen).  Disable "auto" until
+     the paginator learns how to deal with this case.  And, FWIW, the
+     current Android webview treats "auto" as "manual", so compatible for
+     now. */
+  -epub-hyphens: manual !important;
+  -webkit-hyphens: manual !important;
+
+  font-family: serif;
+}
+
+* {
+  /* Disable the popup that appears when tap-holding a link. */
+  -webkit-touch-callout:none;
+}
+
+/* STOPSHIP(duga): This is copied directly from fragment.js. We really
+   shouldn't do that, this is just a temporary hack to get things working.
+   The next step will involve changing the way we insert html and css
+   into the page webview. */
+.gb-segment.gb-horizontal[ocean-reopened-element],
+.gb-segment.gb-horizontal [ocean-reopened-element]
+{
+  text-indent: 0px !important;
+  border-top-width: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
+li[ocean-reopened-element] { list-style-type: none !important; }
+
+.gb-segment.gb-horizontal[ocean-sliced-element],
+.gb-segment.gb-horizontal [ocean-sliced-element]
+{
+  border-bottom-width: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.gb-segment.gb-vertical[ocean-reopened-element],
+.gb-segment.gb-vertical [ocean-reopened-element]
+{
+  text-indent: 0px !important;
+  border-right-width: 0px !important;
+  border-right-right-radius: 0px !important;
+  border-right-left-radius: 0px !important;
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+}
+
+.gb-segment.gb-vertical[ocean-sliced-element],
+.gb-segment.gb-vertical [ocean-sliced-element]
+{
+  border-left-width: 0px !important;
+  border-left-right-radius: 0px !important;
+  border-left-left-radius: 0px !important;
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+}
+
+/* fonts.css */
+
+@font-face {
+  src:local(Literata);
+  font-family:serif;
+}
+@font-face {
+  src:local(Literata);
+  font-family:serif;
+  font-weight:bold;
+}
+@font-face {
+  src:local(Literata);
+  font-family:serif;
+  font-style:italic;
+}
+@font-face {
+  src:local(Literata);
+  font-family:serif;
+  font-weight:bold;
+  font-style:italic;
+}
+@font-face {
+  src:local(Literata);
+  font-family:times;
+}
+@font-face {
+  src:local(Literata);
+  font-family:times;
+  font-weight:bold;
+}
+@font-face {
+  src:local(Literata);
+  font-family:times;
+  font-style:italic;
+}
+@font-face {
+  src:local(Literata);
+  font-family:times;
+  font-weight:bold;
+  font-style:italic;
+}
+@font-face {
+  src:local(Literata);
+  font-family:goudy;
+}
+@font-face {
+  src:local(Literata);
+  font-family:goudy;
+  font-weight:bold;
+}
+@font-face {
+  src:local(Literata);
+  font-family:goudy;
+  font-style:italic;
+}
+@font-face {
+  src:local(Literata);
+  font-family:goudy;
+  font-weight:bold;
+  font-style:italic;
+}
+@font-face {
+  src:local(Literata);
+  font-family:"itc stone serif";
+}
+@font-face {
+  src:local(Literata);
+  font-family:"itc stone serif";
+  font-weight:bold;
+}
+@font-face {
+  src:local(Literata);
+  font-family:"itc stone serif";
+  font-style:italic;
+}
+@font-face {
+  src:local(Literata);
+  font-family:"itc stone serif";
+  font-weight:bold;
+  font-style:italic;
+}
+
+/* no_publisher.css */
+
+p {
+  margin: 0;
+  text-indent: 1em;
+}
+p:first-child {
+  text-indent: 0px;
+}
+
+.flow p {
+  text-indent: 0em;
+  margin-bottom: 0.5em;
+}
+
+.flow .gimg_graphic,
+.flow .gimg_table {
+  margin: 1em 0;
+}
+
+.flow .gstxt_hlt {
+  background-color: yellow;
+}
+.flow .gstxt_sub {
+  font-size: 75%;
+  vertical-align: sub;
+}
+.flow .gstxt_sup {
+  font-size: 75%;
+  vertical-align: super;
+}
+.flow .gstxt_underline {
+  text-decoration: underline;
+}
+
+.flow .gtxt_body {
+  margin: 0;
+}
+.flow .gtxt_footnote {
+  background: #eee;
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+.flow .gtxt_heading {
+  font-size: 150%;
+  font-variant: small-caps;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.flow .gtxt_h1_heading {
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+}
+.flow .gtxt_h2_heading {
+  font-size: 110%;
+  font-weight: bold;
+}
+.flow .gtxt_h3_heading {
+  font-weight: bold;
+}
+.flow .gtxt_inset_box {
+  border: 1px solid #666;
+  margin: 1em;
+  padding: 0.5em;
+}
+.flow .gtxt_lineated {
+  margin: 1em 0em 1em 2em;
+  white-space: pre-wrap;
+}
+.flow .gtxt_lineated_code {
+  font-family: monospace;
+  margin: 1em 0em 1em 2em;
+  white-space: pre-wrap;
+}
+.flow .gtxt_list_entry {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+.flow .gtxt_quote {
+  margin: 1em 2em;
+}

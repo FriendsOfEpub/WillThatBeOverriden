@@ -1,0 +1,439 @@
+/* Copyright 2011 Google Inc.  All Rights Reserved. */
+
+​
+/* Css declarations that always get applied to a book. Any styles that should
+   be applied to content itself should target .gb-segment as the first rule
+   in the selector instead of #gb-container, #gb-content, #gb-content2 or
+   .gb-chapter, as those selectors will not match content in the paginator.
+   Styles that apply to containers but not the content they wrap should not have
+   .gb-segment in the rule. */
+
+​ html,
+body,
+.gb-segment {
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+​ .gb-page {
+    position: absolute;
+}
+​ .gb-page-container {
+    position: absolute;
+    overflow: hidden;
+}
+​
+/* Keep this in sync with ForegroundColor in util_common.js and
+   ReaderUtils.get(Background|Foreground)Color */
+
+body.sepia-mode {
+    background-color: #ece1ca !important;
+    color: #645032 !important;
+}
+​ body.sepia-mode * {
+    background-color: transparent !important;
+    color: #645032 !important;
+}
+​ body.sepia-mode a:link {
+    /* Try to use the webkit link color, otherwise falls back to blue. */
+    
+    color: blue !important;
+    color: -webkit-link !important;
+}
+​ body.night-mode {
+    background-color: #000 !important;
+    color: #cccccc !important;
+    /* @color/books_night_text */
+}
+​ body.night-mode * {
+    background-color: transparent !important;
+    color: #cccccc !important;
+    /* @color/books_night_text */
+}
+​ body.night-mode a:link,
+body.footnote-night-mode a:link {
+    color: #039be5 !important;
+    /* @color/material_light_blue_600 */
+}
+​ body.footnote-night-mode {
+    background-color: #212121 !important;
+    /* @color/material_grey_900 */
+    
+    color: #cccccc !important;
+    /* @color/books_night_text */
+}
+​ body.footnote-night-mode * {
+    background-color: transparent !important;
+    color: #cccccc !important;
+}
+​
+/* Make sure we have word wrap */
+
+.gb-segment pre {
+    white-space: pre-wrap !important;
+}
+​
+/* Styles for the DOM elements created in javascript */
+
+#gb-container {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+​ #gb-content2,
+#gb-content {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+​ #gb-content > .gb-chapter {
+    border: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+​ .gb-segment {
+    word-wrap: break-word !important;
+    /* Make sure long words get broken up rather than chopped.*/
+}
+​
+/* TODO (jrochest) This fixes b/6393208, but may cause problems with svg elements that
+ * set word-wrap to a value besides 'normal'. This case should be less common than
+ * svg that assumes word-wrap: normal, which is the default value for word-wrap.
+*/
+
+.gb-segment svg {
+    word-wrap: normal !important;
+}
+​ ​
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+​
+/* See https://github.com/fred-wang/mathml.css */
+
+@namespace "http://www.w3.org/1998/Math/MathML";
+​
+/* math */
+
+math {
+    display: inline;
+    text-indent: 0;
+}
+math[display="block"] {
+    display: block;
+    text-align: center;
+}
+​
+/* fraction */
+
+mfrac {
+    display: inline-block !important;
+    vertical-align: -50%;
+    border-collapse: collapse;
+}
+mfrac > * {
+    display: block !important;
+}
+mfrac > * + * {
+    display: inline-block !important;
+    vertical-align: top;
+}
+mfrac:not([linethickness="0"]) > *:first-child {
+    border-bottom: solid thin;
+}
+​
+/* sub/sup scripts */
+
+msub > *:nth-child(2),
+msubsup > *:nth-child(2),
+mmultiscripts > *:nth-child(2n+2),
+mmultiscripts > mprescripts ~ *:nth-child(2n+3) {
+    font-size: 0.8em;
+    vertical-align: sub;
+}
+msup > *:nth-child(2),
+msubsup > *:nth-child(3),
+mmultiscripts > *:nth-child(2n+3),
+mmultiscripts > mprescripts ~ *:nth-child(2n+2) {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+mprescripts:after {
+    content: ";";
+}
+​
+/* under/over scripts */
+
+munder,
+mover,
+munderover {
+    display: inline-flex !important;
+    flex-direction: column;
+}
+munder > *:nth-child(2),
+munderover > *:nth-child(2) {
+    font-size: 0.8em;
+    order: +1;
+}
+mover > *:nth-child(2),
+munderover > *:nth-child(3) {
+    font-size: 0.8em;
+    order: -1;
+}
+munder {
+    vertical-align: text-top;
+}
+mover {
+    vertical-align: text-bottom;
+}
+munderover {
+    vertical-align: middle;
+}
+​
+/* roots */
+
+msqrt,
+mroot {
+    display: inline-flex !important;
+    margin-left: .5em;
+    vertical-align: middle;
+    border-top: solid thin;
+}
+msqrt:before,
+mroot:before {
+    margin-left: -.5em;
+    content: "\221A";
+}
+mroot > *:nth-child(2) {
+    margin-right: .25em;
+    margin-left: -.75em;
+    font-size: 0.8em;
+    order: -1;
+}
+​
+/* menclose */
+
+menclose {
+    display: inline-table !important;
+    border-collapse: separate;
+    border-spacing: 0.4ex 0;
+}
+menclose[notation*="top"],
+menclose[notation*="actuarial"] {
+    border-top: solid thin;
+}
+menclose[notation*="bottom"],
+menclose[notation*="madruwb"] {
+    border-bottom: solid thin;
+}
+menclose[notation*="right"],
+menclose[notation*="actuarial"],
+menclose[notation*="madruwb"] {
+    border-right: solid thin;
+}
+menclose[notation*="left"] {
+    border-left: solid thin;
+}
+menclose[notation*="box"],
+menclose[notation*="roundedbox"],
+menclose[notation*="circle"] {
+    border: solid thin;
+}
+menclose[notation*="roundedbox"] {
+    border-radius: 15%;
+}
+menclose[notation*="circle"] {
+    border-radius: 50%;
+}
+menclose[notation*="horizontalstrike"] {
+    text-decoration: line-through;
+}
+​
+/* table */
+
+mtable {
+    display: inline-table !important;
+    vertical-align: middle;
+}
+mtr {
+    display: table-row !important;
+}
+mtd {
+    display: table-cell !important;
+    padding: 0 0.5ex;
+}
+​
+/* token elements */
+
+mspace {
+    margin: .2em;
+}
+mi {
+    font-style: italic;
+}
+mo {
+    margin-right: .2em;
+    margin-left: .2em;
+}
+ms:before,
+ms:after {
+    content: "\0022";
+}
+ms[lquote]:before {
+    content: attr(lquote);
+}
+ms[rquote]:after {
+    content: attr(rquote);
+}
+​
+/* mathvariants */
+
+[mathvariant="bold"],
+[mathvariant="bold-italic"],
+[mathvariant="bold-sans-serif"],
+[mathvariant="sans-serif-bold-italic"] {
+    font-weight: bold;
+    font-style: normal;
+}
+[mathvariant="monospace"] {
+    font-family: monospace;
+    font-style: normal;
+}
+[mathvariant="sans-serif"],
+[mathvariant="bold-sans-serif"],
+[mathvariant="sans-serif-italic"],
+[mathvariant="sans-serif-bold-italic"] {
+    font-family: sans-serif;
+    font-style: normal;
+}
+[mathvariant="italic"],
+[mathvariant="bold-italic"],
+[mathvariant="sans-serif-italic"],
+[mathvariant="sans-serif-bold-italic"] {
+    font-style: italic;
+}
+[mathvariant="normal"] {
+    font-style: normal;
+}
+​
+/* mphantom */
+
+mphantom {
+    visibility: hidden;
+}
+​
+/* merror */
+
+merror {
+    outline: solid thin red;
+}
+merror:before {
+    content: "Error: ";
+}
+​
+/* annotations */
+
+semantics > *:first-child {
+    display: inline;
+}
+annotation,
+annotation-xml {
+    font-family: monospace;
+    display: none !important;
+}
+math:active > semantics > *:first-child,
+math:active > semantics > *:first-child {
+    display: none !important;
+}
+math:active annotation:first-of-type {
+    display: inline !important;
+}
+​ ​ .gb-segment.gb-horizontal[ocean-reopened-element],
+.gb-segment.gb-horizontal [ocean-reopened-element] {
+    text-indent: 0px !important;
+    border-top-width: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+li[ocean-reopened-element] {
+    list-style-type: none !important;
+}
+.gb-segment.gb-horizontal[ocean-sliced-element],
+.gb-segment.gb-horizontal [ocean-sliced-element] {
+    border-bottom-width: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+.gb-segment.gb-vertical[ocean-reopened-element],
+.gb-segment.gb-vertical [ocean-reopened-element] {
+    text-indent: 0px !important;
+    border-right-width: 0px !important;
+    border-right-right-radius: 0px !important;
+    border-right-left-radius: 0px !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+}
+.gb-segment.gb-vertical[ocean-sliced-element],
+.gb-segment.gb-vertical [ocean-sliced-element] {
+    border-left-width: 0px !important;
+    border-left-right-radius: 0px !important;
+    border-left-left-radius: 0px !important;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+}
+@font-face {
+    font-family: "literata";
+    src: url("fonts/literata-regular.otf");
+}
+@font-face {
+    font-family: "literata";
+    src: url("fonts/literata-italic.otf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "literata";
+    src: url(fonts/literata-bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: "literata";
+    src: url("fonts/literata-bold-italic.otf");
+    font-style: italic;
+    font-weight: bold;
+}
+body {
+    font-family: literata;
+}
+@font-face {
+    font-family: "gpb-literata";
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/literata-regular.otf");
+}
+@font-face {
+    font-family: "gpb-literata";
+    font-style: normal;
+    font-weight: bold;
+    src: url("fonts/literata-bold.otf");
+}
+@font-face {
+    font-family: "gpb-literata";
+    font-style: italic;
+    font-weight: normal;
+    src: url("fonts/literata-italic.otf");
+}
+@font-face {
+    font-family: "gpb-literata";
+    font-style: italic;
+    font-weight: bold;
+    src: url("fonts/literata-bold-italic.otf");
+}
