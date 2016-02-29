@@ -1,0 +1,13 @@
+.rd-highlight {
+    position: absolute;
+    opacity: 0.5;
+}
+.underline-range {
+    position: absolute;
+}
+.transparent-part {
+	height:90%;
+}
+.underline-part {
+	height:2px;
+}
