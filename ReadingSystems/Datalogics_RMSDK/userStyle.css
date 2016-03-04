@@ -1,6 +1,50 @@
-/* From my understanding, this is a "placeholder" stylesheet which gets edited dynamically */
+/* From my understanding, this is a "placeholder" stylesheet which gets edited dynamically 
+   see http://feedback.datalogics.com/knowledgebase/articles/819900-dynamically-changing-styles-using-the-rmsdk-userst */
 
 body
 {
 
 }
+
+/* Sample from Datalogics Feedback */
+
+/* 
+
+Forcing default font
+@font-face { 
+	font-family: -ua-default; 
+	font-style: normal; 
+	font-weight: normal; 
+	src: url("res:///MyriadPro-Regular.otf")
+}
+
+This, OTOA, allows fonts to be modified by user when ePub is running
+@font-face { 
+	font-family: -ua-default;
+	font-style: normal; 
+	font-weight: normal;
+	 src: url("res:///fonts/TestFont.ttf")
+}
+
+Background-colors 
+
+Sepia
+@media sepia {
+	* { color: #000000; }
+	body { background-color: #eae4d3; }
+}
+ 
+Black 
+@media black {
+	* { color: #ffffff; }
+	body { background-color: #000000; color: #ffffff; }
+}
+ 
+White 
+@media white {
+	* { color: #000000; }
+	body { background-color: #ffffff; }
+} 
+
+URL: res:///userStyle.css
+*/
