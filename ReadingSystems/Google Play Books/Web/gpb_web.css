@@ -1,0 +1,579 @@
+/* This may or may not apply */
+
+a:link, a:active {
+    color: #11c
+}
+
+a:visited {
+    color: #11c
+}
+
+a:hover {
+    color: #11c
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: arial, sans-serif
+}
+
+input, textarea, select {
+    font-size: 13px;
+    font-family: arial, sans-serif
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td {
+    padding: 0
+}
+
+h1, h2 {
+    border: 0;
+    margin: 0
+}
+
+img {
+    border: 0
+}
+
+a {
+    color: #427fed;
+    cursor: pointer;
+    text-decoration: none
+}
+
+a:hover, a:active {
+    text-decoration: underline
+}
+
+/* END -> Not sure about the above */
+
+
+/* DEFAULTS - injected as <style> in <head> */
+
+.OjrvKe-DARUcf-H9tDt {
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: georgia, serif;
+}
+
+.OjrvKe-DARUcf-H9tDt p {
+  text-align: left;
+}
+
+.gb-content {
+  word-break: break-word;
+  -webkit-user-select: text;
+}
+
+.gb-content p {
+  margin: 0px;
+}
+
+.gb-content pre {
+  white-space: pre-wrap;
+}
+
+.gb-content table {
+  word-break: normal;
+}
+
+.gb-content-default p {
+  text-indent: 1.5em;
+}
+
+.flow p {
+  text-indent: 0px;
+  margin-bottom: 0.5em;
+}
+
+.flow .gimg_graphic, .flow .gimg_table {
+  margin: 1em 0px;
+}
+
+.flow .gstxt_hlt {
+  background-color: yellow;
+}
+
+.flow .gstxt_sub {
+  font-size: 75%;
+  vertical-align: sub;
+}
+
+.flow .gstxt_sup {
+  font-size: 75%;
+  vertical-align: super;
+}
+
+.flow .gstxt_underline {
+  text-decoration: underline;
+}
+
+.flow .gtxt_body {
+  margin: 0px;
+}
+
+.flow div.gtxt_footnote {
+  background-color: rgb(238, 238, 238);
+  font-style: italic;
+  font-size: 0.9em;
+  padding: 0.5em;
+  background-position: initial initial;
+  background-repeat: initial initial;
+}
+
+.flow .gtxt_heading {
+  font-size: 150%;
+  font-variant: small-caps;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.flow .gtxt_h1_heading {
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.flow .gtxt_h2_heading {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.flow .gtxt_h3_heading {
+  font-weight: bold;
+}
+
+.flow div.gtxt_inset_box {
+  border: 1px solid rgb(102, 102, 102);
+  margin: 1em;
+  padding: 0.5em;
+}
+
+.flow .gtxt_lineated {
+  margin: 1em 0px 1em 2em;
+  white-space: pre-wrap;
+}
+
+.flow .gtxt_lineated_code {
+  font-family: monospace;
+  margin: 1em 0px 1em 2em;
+  white-space: pre-wrap;
+}
+
+.flow .gtxt_list_entry {
+  margin-left: 1em;
+  text-indent: -1em;
+}
+
+.flow .gtxt_quote {
+  margin: 1em 2em;
+}
+
+/* .gb-segment is added in font of document styles */
+
+/* EXAMPLE -> min+ CSS */
+
+@page {
+  padding: 0px; margin: 12px 0px;
+}
+
+.gb-segment {
+  margin: 0px 16px;
+  padding: 0px;
+  font-size: 100%;
+  font-family: 'Myriad Pro', iBooks_Seravek, Seravek, 'Trebuchet MS', 'PT Sans', 'Droid Sans', sans-serif;
+  -webkit-hyphens: none;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.gb-segment div {
+  margin: 0px;
+  padding: 0px;
+}
+
+.gb-segment .sans {
+  font-family: 'Myriad Pro', iBooks_Seravek, Seravek, 'Trebuchet MS', 'PT Sans', 'Droid Sans', sans-serif;
+}
+
+.gb-segment .serif-old, .gb-segment.serif-old {
+  font-family: iBooks_Iowan_Old_Style, 'Iowan Old Style', Palatino, Georgia, Cambria, 'Droid Serif', serif;
+}
+
+.gb-segment .serif, .gb-segment.serif {
+  font-family: 'Minion Pro', Marion, Bookerly, Malabar, MalabarET, MalabareText, Malabar_eText, Malabar-eText, 'Malabar eText', 'Times New Roman', serif;
+}
+
+.gb-segment h1 {
+  font-size: 1em;
+  margin: 1.5em 0px 3em;
+  line-height: inherit;
+  font-weight: bold;
+  text-indent: 0px;
+  text-align: left;
+}
+
+.gb-segment h2 {
+  font-size: 1em;
+  margin: 1.5em 0px;
+  line-height: inherit;
+  font-weight: bold;
+  text-indent: 0px;
+  text-align: left;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: rgb(85, 85, 85);
+  padding-left: 1.375em;
+  page-break-after: avoid;
+}
+
+.gb-segment .serif h2, .gb-segment.serif h2, .gb-segment h2.serif, .gb-segment .serif-old h2, .gb-segment.serif-old h2, .gb-segment h2.serif-old {
+  font-style: italic;
+  border: none;
+  padding-left: 0px;
+}
+
+.gb-segment p {
+  font-size: 1em;
+  text-indent: 0px;
+  line-height: inherit;
+  margin: 1.5em 0px 0px;
+}
+
+.gb-segment ul, .gb-segment ol {
+  margin: 1.5em 0px;
+  padding-left: 2em;
+}
+
+.gb-segment ul ul, .gb-segment ul ol, .gb-segment ol ol, .gb-segment ol ul {
+  margin: 0px;
+  line-height: inherit;
+}
+
+.gb-segment ul {
+  list-style-type: circle;
+}
+
+.gb-segment ul ul, .gb-segment ol ul {
+  list-style-type: disc;
+}
+
+.gb-segment .serif ul, .gb-segment.serif ul, .gb-segment ul.serif, .gb-segment .serif-old ul, .gb-segment.serif-old ul, .gb-segment ul.serif-old {
+  list-style-type: disc;
+}
+
+.gb-segment .serif ul ul, .gb-segment.serif ul ul, .gb-segment ul.serif ul, .gb-segment .serif-old ul ul, .gb-segment.serif-old ul ul, .gb-segment ul.serif-old ul {
+  list-style-type: circle;
+}
+
+.gb-segment li {
+  text-indent: 0px;
+  line-height: inherit;
+  margin: 0px;
+}
+
+.gb-segment blockquote {
+  margin: 1.4375em 10% 1.4375em 5%;
+  padding: 0.75em 2.5%;
+  font-size: 1em;
+  line-height: inherit;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(202, 202, 202);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(202, 202, 202);
+  page-break-inside: avoid;
+}
+
+.gb-segment .serif blockquote, .gb-segment.serif blockquote, .gb-segment blockquote.serif, .gb-segment .serif-old blockquote, .gb-segment.serif-old blockquote, .gb-segment blockquote.serif-old {
+  margin: 1.5em 10% 1.5em 5%;
+  border: none;
+  padding: 0px;
+  font-style: italic;
+}
+
+.gb-segment blockquote p {
+  margin: 0px;
+  text-align: inherit;
+}
+
+.gb-segment blockquote > p + p {
+  margin-top: 1.5em;
+}
+
+.gb-segment p img, .gb-segment div img {
+  text-align: left;
+  text-indent: 0px;
+  display: block;
+  padding-top: 1.25em;
+  padding-bottom: 0.25em;
+}
+
+.gb-segment img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.gb-segment i, .gb-segment em, .gb-segment cite, .gb-segment dfn, .gb-segment q {
+  font-style: italic;
+}
+
+.gb-segment .serif blockquote i, .gb-segment.serif blockquote i, .gb-segment .serif blockquote em, .gb-segment.serif blockquote em, .gb-segment .serif blockquote cite, .gb-segment.serif blockquote cite, .gb-segment blockquote.serif i, .gb-segment blockquote.serif em, .gb-segment blockquote.serif cite, .gb-segment .serif-old blockquote i, .gb-segment.serif-old blockquote i, .gb-segment .serif-old blockquote em, .gb-segment.serif-old blockquote em, .gb-segment .serif-old blockquote cite, .gb-segment.serif-old blockquote cite, .gb-segment blockquote.serif-old i, .gb-segment blockquote.serif-old em, .gb-segment blockquote.serif-old cite, .gb-segment i i, .gb-segment i em, .gb-segment i cite, .gb-segment em i, .gb-segment em em, .gb-segment em cite, .gb-segment cite i, .gb-segment cite em, .gb-segment cite cite {
+  font-style: normal;
+}
+
+.gb-segment b, .gb-segment strong {
+  font-weight: bold;
+}
+
+.gb-segment sup {
+  font-size: 75%;
+  vertical-align: 30%;
+  line-height: 1.2;
+}
+
+.gb-segment sub {
+  font-size: 75%;
+  vertical-align: -18%;
+  line-height: 1.2;
+}
+
+.gb-segment small, .gb-segment abbr {
+  font-size: 81.25%;
+}
+
+.gb-segment abbr {
+  text-transform: uppercase;
+}
+
+.gb-segment a {
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(202, 202, 202);
+}
+
+@media amzn-kf8 {
+ 
+  .gb-segment blockquote, .gb-segment .legende, .gb-segment .sidebar {
+    page-break-inside: auto;
+  }
+
+  .gb-segment a {
+    border: none;
+    text-decoration: underline;
+  }
+}
+
+@media amzn-mobi {
+ 
+  .gb-segment h1 {
+    font-size: 32px;
+    margin: 1em 0px 2em;
+    font-weight: bold;
+  }
+
+  .gb-segment h2 {
+    font-size: 24px;
+    margin: 1em 0px;
+    padding: 0px;
+    font-weight: bold;
+  }
+
+  .gb-segment h3 {
+    margin: 1em 0px;
+    font-weight: bold;
+  }
+
+  .gb-segment h4 {
+    font-weight: bold;
+  }
+
+  .gb-segment p {
+    margin: 0px;
+    text-indent: 1em;
+  }
+
+  .gb-segment ul, .gb-segment ol {
+    margin: 1em 0px;
+  }
+
+  .gb-segment blockquote {
+    font-size: 13px;
+    width: 100%;
+    margin: 1em;
+    padding: 0px;
+    font-style: italic;
+  }
+
+  .gb-segment a {
+    border: none;
+    text-decoration: underline;
+  }
+
+  .gb-segment hr {
+    width: 100%;
+    margin: 1em 0px;
+  }
+
+  .gb-segment dl {
+    margin: 1em 0px;
+  }
+
+  .gb-segment dt {
+    margin: 1em 0px 0px;
+  }
+
+  .gb-segment address {
+    margin: 1em 0px;
+  }
+
+  .gb-segment pre {
+    margin: 1em 0px 1em 5%;
+  }
+
+  .gb-segment table {
+    margin: 1em 0px;
+  }
+
+  .gb-segment .legende {
+    margin: 1em 0px;
+  }
+
+  .gb-segment .sidebar {
+    font-size: 13px;
+    margin: 1em 0px;
+  }
+
+  .gb-segment .stanza {
+    margin: 1em 0px;
+  }
+}
+
+/* END OF EXAMPLE */
+
+.gb-segment.gb-horizontal[ocean-reopened-element], .gb-segment.gb-horizontal [ocean-reopened-element] {
+  text-indent: 0px !important;
+  border-top-width: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
+li[ocean-reopened-element] {
+  list-style-type: none !important;
+}
+
+.gb-segment.gb-horizontal[ocean-sliced-element], .gb-segment.gb-horizontal [ocean-sliced-element] {
+  border-bottom-width: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.gb-segment.gb-vertical[ocean-reopened-element], .gb-segment.gb-vertical [ocean-reopened-element] {
+  text-indent: 0px !important;
+  border-right-width: 0px !important;
+  margin-right: 0px !important;
+  padding-right: 0px !important;
+}
+
+.gb-segment.gb-vertical[ocean-sliced-element], .gb-segment.gb-vertical [ocean-sliced-element] {
+  border-left-width: 0px !important;
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+}{display:none;
+}
+
+/* This may or may not apply */
+
+body {
+margin: 0;
+overflow: hidden;
+padding: 0;
+}
+
+::-moz-selection {
+background-color: #B2EBF2;
+}
+
+::selection {
+background-color: #B2EBF2;
+}
+
+div[style^="height: 16px; font: bold 12px/16px"],
+[style="border: 1px solid rgb(51, 102, 204);"],
+[style="border: 1px solid rgb(51, 102, 153);"],
+[style="border: 1px solid rgb(241, 250, 248);"],
+[style="border: 1px solid rgb(145, 117, 77);"],
+[style="border: 1px solid rgb(0, 90, 136);"],
+.ts[style="margin:0 0 12px;height:92px;width:100%"],
+.nH.MC,
+.c[style="margin: 0pt;"],
+.GISRH3UDHB,
+.GGQPGYLCMCB,
+.GGQPGYLCD5,
+.GC3LC41DERB + div[style="position: relative; height: 170px;"],
+#tadsc,
+#ad,
+#center_col > #\5f Emc,
+#center_col > #resultStats + #tads,
+#center_col > #resultStats + #tads + #res + #tads,
+#center_col > #resultStats + div + #res + #tads,
+#center_col > #resultStats + div[style="border:1px solid #dedede;margin-bottom:11px;padding:5px 7px 5px 6px"],
+#center_col > #taw > #tvcap > .rscontainer,
+#center_col > div[style="font-size:14px;margin-right:0;min-height:5px"] > div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff8e7"],
+#cnt #center_col > #res > #topstuff > .ts,
+#main_col > #center_col div[style="font-size:14px;margin:0 4px;padding:1px 5px;background:#fff7ed"],
+#mbEnd[cellspacing="0"][cellpadding="0"],
+#mclip_container:last-child,
+#mn #center_col > div > h2.spon:first-child,
+#mn #center_col > div > h2.spon:first-child + ol:last-child,
+#resultspanel > #topads,
+#rhs_block > #mbEnd,
+#rhs_block > .ts[cellspacing="0"][cellpadding="0"][style="padding:0"],
+#rhswrapper > #rhssection[border="0"][bgcolor="#ffffff"],
+#ssmiwdiv[jsdisplay],
+#tads + div + .c,
+#tads.c,
+#tadsb.c,
+#tadsto.c,
+#topstuff > #tads,
+.GB3L-QEDGY .GB3L-QEDF- > .GB3L-QEDE-,
+.GFYY1SVD2 > .GFYY1SVC2 > .GFYY1SVF5,
+.GFYY1SVE2 > .GFYY1SVD2 > .GFYY1SVG5,
+.GHOFUQ5BG2 > .GHOFUQ5BF2 > .GHOFUQ5BG5,
+.GJJKPX2N1 > .GJJKPX2M1 > .GJJKPX2P4,
+.GKJYXHBF2 > .GKJYXHBE2 > .GKJYXHBH5,
+.GPMV2XEDA2 > .GPMV2XEDP1 > .GPMV2XEDJBB,
+.ch[onclick="ga(this,event)"],
+.commercial-unit-desktop-rhs,
+.commercial-unit-desktop-top,
+.lads[width="100%"][style="background:#FFF8DD"],
+.mod > ._jH + .rscontainer,
+.mw > #rcnt > #center_col > #taw > #tvcap > .c,
+.mw > #rcnt > #center_col > #taw > .c,
+.ra[align="left"][width="30%"],
+.ra[align="right"][width="30%"],
+.ra[width="30%"][align="right"] + table[width="70%"][cellpadding="0"],
+.rhsvw[style="background-color:#fff;margin:0 0 14px;padding-bottom:1px;padding-top:1px;"],
+.rscontainer > .ellip,
+#sqh,
+#center_col > #tads,
+[href^="http://www.google.com/aclk?"] {
+display: none !important;
+}
