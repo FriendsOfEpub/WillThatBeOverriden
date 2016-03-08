@@ -1,0 +1,992 @@
+/* Output in `head` of the doc. Prettified for clarity */
+
+/* FYI, `&gt;` is really exported `&gt;` instead of `>`. 
+This error prevents failure of list-style-type in legacy devices and apps that don't support `:before` though… */
+
+/* Notes: 
+  - font-size in pt = user won't be able to change font-size in a shitload of RS -> switch to em
+  - #000 -> #999 color for el = black/gray text on black/gray background (night modes) in a shitload of RS (indeed background-color is overriden)
+  - font-family on el instead of body = user can't change typeface in a shitload of RS, including Google's
+  - em and strong as span = lost in a shitload of apps once user drops publisher's styles */
+
+ol.lst-kix_yafpiv81kxtx-1.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-1 0;
+}
+
+ol.lst-kix_xjejb3c1266-7 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-8 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-3 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-4 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-5 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-6 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-0 {
+  list-style-type: none;
+}
+
+.lst-kix_ahomm8elgr33-4&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-4;
+}
+
+ol.lst-kix_xjejb3c1266-1 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-2 {
+  list-style-type: none;
+}
+
+.lst-kix_faxi48zftr1b-1&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-1;
+}
+
+ol.lst-kix_ahomm8elgr33-0 {
+  list-style-type: none;
+}
+
+ol.lst-kix_ahomm8elgr33-1 {
+  list-style-type: none;
+}
+
+ol.lst-kix_ahomm8elgr33-2 {
+  list-style-type: none;
+}
+
+ol.lst-kix_ahomm8elgr33-3 {
+  list-style-type: none;
+}
+
+ol.lst-kix_ahomm8elgr33-4 {
+  list-style-type: none;
+}
+
+.lst-kix_yafpiv81kxtx-7&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-7;
+}
+
+.lst-kix_xjejb3c1266-3&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-3;
+}
+
+ol.lst-kix_yafpiv81kxtx-7.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-7 0;
+}
+
+.lst-kix_ahomm8elgr33-0&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-0,decimal) ". ";
+}
+
+ol.lst-kix_ahomm8elgr33-4.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-4 0;
+}
+
+.lst-kix_yjlplppjahlv-6&gt;li:before {
+  content: "\0025cf  ";
+}
+
+.lst-kix_yjlplppjahlv-8&gt;li:before {
+  content: "\0025a0  ";
+}
+
+.lst-kix_yjlplppjahlv-3&gt;li:before {
+  content: "\0025cf  ";
+}
+
+.lst-kix_yjlplppjahlv-7&gt;li:before {
+  content: "\0025cb  ";
+}
+
+.lst-kix_yjlplppjahlv-4&gt;li:before {
+  content: "\0025cb  ";
+}
+
+.lst-kix_ahomm8elgr33-6&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-6;
+}
+
+.lst-kix_yjlplppjahlv-5&gt;li:before {
+  content: "\0025a0  ";
+}
+
+.lst-kix_i9vpxq3h8iw9-4&gt;li:before {
+  content: "\0025cb  ";
+}
+
+ol.lst-kix_faxi48zftr1b-4.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-4 0;
+}
+
+.lst-kix_i9vpxq3h8iw9-5&gt;li:before {
+  content: "\0025a0  ";
+}
+
+.lst-kix_ahomm8elgr33-0&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-0;
+}
+
+.lst-kix_yafpiv81kxtx-0&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-0;
+}
+
+.lst-kix_i9vpxq3h8iw9-6&gt;li:before {
+  content: "\0025cf  ";
+}
+
+ul.lst-kix_1dn4o7gvsm37-0 {
+  list-style-type: none;
+}
+
+ul.lst-kix_1dn4o7gvsm37-2 {
+  list-style-type: none;
+}
+
+.lst-kix_ahomm8elgr33-7&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-7,lower-latin) ". ";
+}
+
+ul.lst-kix_1dn4o7gvsm37-1 {
+  list-style-type: none;
+}
+
+.lst-kix_i9vpxq3h8iw9-7&gt;li:before {
+  content: "\0025cb  ";
+}
+
+.lst-kix_ahomm8elgr33-8&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-8,lower-roman) ". ";
+}
+
+.lst-kix_i9vpxq3h8iw9-8&gt;li:before {
+  content: "\0025a0  ";
+}
+
+ul.lst-kix_1dn4o7gvsm37-8 {
+  list-style-type: none;
+}
+
+ul.lst-kix_1dn4o7gvsm37-7 {
+  list-style-type: none;
+}
+
+.lst-kix_ahomm8elgr33-1&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-1,lower-latin) ". ";
+}
+
+.lst-kix_ahomm8elgr33-3&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-3,decimal) ". ";
+}
+
+ul.lst-kix_1dn4o7gvsm37-4 {
+  list-style-type: none;
+}
+
+ul.lst-kix_1dn4o7gvsm37-3 {
+  list-style-type: none;
+}
+
+ul.lst-kix_1dn4o7gvsm37-6 {
+  list-style-type: none;
+}
+
+ol.lst-kix_faxi48zftr1b-8.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-8 0;
+}
+
+.lst-kix_ahomm8elgr33-2&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-2,lower-roman) ". ";
+}
+
+.lst-kix_ahomm8elgr33-6&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-6,decimal) ". ";
+}
+
+ul.lst-kix_1dn4o7gvsm37-5 {
+  list-style-type: none;
+}
+
+.lst-kix_ahomm8elgr33-5&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-5,lower-roman) ". ";
+}
+
+.lst-kix_ahomm8elgr33-4&gt;li:before {
+  content: "" counter(lst-ctn-kix_ahomm8elgr33-4,lower-latin) ". ";
+}
+
+ol.lst-kix_faxi48zftr1b-3.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-3 0;
+}
+
+.lst-kix_xjejb3c1266-5&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-5;
+}
+
+ol.lst-kix_yafpiv81kxtx-2.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-2 0;
+}
+
+.lst-kix_faxi48zftr1b-3&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-3;
+}
+
+ol.lst-kix_ahomm8elgr33-5.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-5 0;
+}
+
+.lst-kix_yafpiv81kxtx-3&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-3;
+}
+
+.lst-kix_faxi48zftr1b-8&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-8;
+}
+
+ol.lst-kix_ahomm8elgr33-8.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-8 0;
+}
+
+.lst-kix_xjejb3c1266-1&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-1,lower-latin) ". ";
+}
+
+.lst-kix_xjejb3c1266-3&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-3,decimal) ". ";
+}
+
+ul.lst-kix_i9vpxq3h8iw9-0 {
+  list-style-type: none;
+}
+
+ul.lst-kix_i9vpxq3h8iw9-1 {
+  list-style-type: none;
+}
+
+ul.lst-kix_i9vpxq3h8iw9-2 {
+  list-style-type: none;
+}
+
+ul.lst-kix_i9vpxq3h8iw9-3 {
+  list-style-type: none;
+}
+
+ul.lst-kix_i9vpxq3h8iw9-4 {
+  list-style-type: none;
+}
+
+ul.lst-kix_i9vpxq3h8iw9-5 {
+  list-style-type: none;
+}
+
+ol.lst-kix_faxi48zftr1b-2.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-2 0;
+}
+
+.lst-kix_yafpiv81kxtx-6&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-6,decimal) ". ";
+}
+
+.lst-kix_faxi48zftr1b-7&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-7;
+}
+
+.lst-kix_yafpiv81kxtx-4&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-4,lower-latin) ". ";
+}
+
+ol.lst-kix_xjejb3c1266-8.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-8 0;
+}
+
+.lst-kix_faxi48zftr1b-3&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-3,decimal) ". ";
+}
+
+ul.lst-kix_i9vpxq3h8iw9-6 {
+  list-style-type: none;
+}
+
+ul.lst-kix_i9vpxq3h8iw9-7 {
+  list-style-type: none;
+}
+
+.lst-kix_xjejb3c1266-5&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-5,lower-roman) ". ";
+}
+
+.lst-kix_xjejb3c1266-7&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-7,lower-latin) ". ";
+}
+
+ul.lst-kix_i9vpxq3h8iw9-8 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-0.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-0 0;
+}
+
+.lst-kix_yafpiv81kxtx-2&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-2,lower-roman) ". ";
+}
+
+.lst-kix_faxi48zftr1b-1&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-1,lower-latin) ". ";
+}
+
+.lst-kix_yafpiv81kxtx-4&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-4;
+}
+
+.lst-kix_faxi48zftr1b-5&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-5,lower-roman) ". ";
+}
+
+ol.lst-kix_faxi48zftr1b-3 {
+  list-style-type: none;
+}
+
+.lst-kix_faxi48zftr1b-7&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-7,lower-latin) ". ";
+}
+
+ol.lst-kix_faxi48zftr1b-2 {
+  list-style-type: none;
+}
+
+.lst-kix_yafpiv81kxtx-8&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-8,lower-roman) ". ";
+}
+
+ol.lst-kix_faxi48zftr1b-1 {
+  list-style-type: none;
+}
+
+ol.lst-kix_faxi48zftr1b-0 {
+  list-style-type: none;
+}
+
+ol.lst-kix_faxi48zftr1b-7 {
+  list-style-type: none;
+}
+
+ol.lst-kix_faxi48zftr1b-6 {
+  list-style-type: none;
+}
+
+ol.lst-kix_faxi48zftr1b-5 {
+  list-style-type: none;
+}
+
+ol.lst-kix_faxi48zftr1b-4 {
+  list-style-type: none;
+}
+
+ol.lst-kix_yafpiv81kxtx-0.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-0 0;
+}
+
+ol.lst-kix_faxi48zftr1b-8 {
+  list-style-type: none;
+}
+
+.lst-kix_yjlplppjahlv-0&gt;li:before {
+  content: "\0025cf  ";
+}
+
+.lst-kix_i9vpxq3h8iw9-3&gt;li:before {
+  content: "\0025cf  ";
+}
+
+.lst-kix_yjlplppjahlv-2&gt;li:before {
+  content: "\0025a0  ";
+}
+
+.lst-kix_i9vpxq3h8iw9-1&gt;li:before {
+  content: "\0025cb  ";
+}
+
+.lst-kix_yafpiv81kxtx-5&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-5;
+}
+
+ol.lst-kix_faxi48zftr1b-0.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-0 0;
+}
+
+ol.lst-kix_ahomm8elgr33-5 {
+  list-style-type: none;
+}
+
+ol.lst-kix_ahomm8elgr33-6 {
+  list-style-type: none;
+}
+
+ol.lst-kix_ahomm8elgr33-7 {
+  list-style-type: none;
+}
+
+ol.lst-kix_ahomm8elgr33-8 {
+  list-style-type: none;
+}
+
+.lst-kix_ahomm8elgr33-5&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-5;
+}
+
+.lst-kix_ahomm8elgr33-3&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-3;
+}
+
+.lst-kix_xjejb3c1266-4&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-4;
+}
+
+.lst-kix_faxi48zftr1b-2&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-2;
+}
+
+ol.lst-kix_yafpiv81kxtx-2 {
+  list-style-type: none;
+}
+
+ol.lst-kix_yafpiv81kxtx-3 {
+  list-style-type: none;
+}
+
+ol.lst-kix_yafpiv81kxtx-4 {
+  list-style-type: none;
+}
+
+ol.lst-kix_yafpiv81kxtx-5 {
+  list-style-type: none;
+}
+
+ol.lst-kix_yafpiv81kxtx-0 {
+  list-style-type: none;
+}
+
+.lst-kix_yafpiv81kxtx-8&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-8;
+}
+
+ol.lst-kix_yafpiv81kxtx-1 {
+  list-style-type: none;
+}
+
+ol.lst-kix_ahomm8elgr33-1.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-1 0;
+}
+
+ol.lst-kix_yafpiv81kxtx-6 {
+  list-style-type: none;
+}
+
+ol.lst-kix_yafpiv81kxtx-7 {
+  list-style-type: none;
+}
+
+ol.lst-kix_yafpiv81kxtx-4.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-4 0;
+}
+
+ol.lst-kix_yafpiv81kxtx-8 {
+  list-style-type: none;
+}
+
+ol.lst-kix_faxi48zftr1b-1.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-1 0;
+}
+
+ol.lst-kix_ahomm8elgr33-7.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-7 0;
+}
+
+.lst-kix_xjejb3c1266-6&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-6;
+}
+
+ol.lst-kix_yafpiv81kxtx-3.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-3 0;
+}
+
+ol.lst-kix_xjejb3c1266-6.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-6 0;
+}
+
+.lst-kix_ahomm8elgr33-1&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-1;
+}
+
+ol.lst-kix_xjejb3c1266-2.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-2 0;
+}
+
+.lst-kix_ahomm8elgr33-7&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-7;
+}
+
+.lst-kix_xjejb3c1266-8&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-8;
+}
+
+.lst-kix_1dn4o7gvsm37-1&gt;li:before {
+  content: "\0025cb  ";
+}
+
+ol.lst-kix_ahomm8elgr33-6.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-6 0;
+}
+
+.lst-kix_1dn4o7gvsm37-0&gt;li:before {
+  content: "\0025cf  ";
+}
+
+ul.lst-kix_yjlplppjahlv-5 {
+  list-style-type: none;
+}
+
+ul.lst-kix_yjlplppjahlv-6 {
+  list-style-type: none;
+}
+
+ul.lst-kix_yjlplppjahlv-7 {
+  list-style-type: none;
+}
+
+.lst-kix_yafpiv81kxtx-0&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-0,decimal) ". ";
+}
+
+ul.lst-kix_yjlplppjahlv-8 {
+  list-style-type: none;
+}
+
+.lst-kix_1dn4o7gvsm37-2&gt;li:before {
+  content: "\0025a0  ";
+}
+
+ul.lst-kix_yjlplppjahlv-1 {
+  list-style-type: none;
+}
+
+ol.lst-kix_xjejb3c1266-7.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-7 0;
+}
+
+ul.lst-kix_yjlplppjahlv-2 {
+  list-style-type: none;
+}
+
+ul.lst-kix_yjlplppjahlv-3 {
+  list-style-type: none;
+}
+
+ul.lst-kix_yjlplppjahlv-4 {
+  list-style-type: none;
+}
+
+.lst-kix_1dn4o7gvsm37-3&gt;li:before {
+  content: "\0025cf  ";
+}
+
+.lst-kix_faxi48zftr1b-0&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-0;
+}
+
+ul.lst-kix_yjlplppjahlv-0 {
+  list-style-type: none;
+}
+
+.lst-kix_1dn4o7gvsm37-4&gt;li:before {
+  content: "\0025cb  ";
+}
+
+.lst-kix_1dn4o7gvsm37-5&gt;li:before {
+  content: "\0025a0  ";
+}
+
+.lst-kix_1dn4o7gvsm37-7&gt;li:before {
+  content: "\0025cb  ";
+}
+
+.lst-kix_xjejb3c1266-2&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-2;
+}
+
+.lst-kix_faxi48zftr1b-6&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-6;
+}
+
+.lst-kix_1dn4o7gvsm37-6&gt;li:before {
+  content: "\0025cf  ";
+}
+
+ol.lst-kix_xjejb3c1266-1.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-1 0;
+}
+
+.lst-kix_yafpiv81kxtx-6&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-6;
+}
+
+.lst-kix_1dn4o7gvsm37-8&gt;li:before {
+  content: "\0025a0  ";
+}
+
+.lst-kix_xjejb3c1266-2&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-2,lower-roman) ". ";
+}
+
+ol.lst-kix_yafpiv81kxtx-8.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-8 0;
+}
+
+.lst-kix_xjejb3c1266-0&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-0,decimal) ". ";
+}
+
+.lst-kix_xjejb3c1266-4&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-4,lower-latin) ". ";
+}
+
+.lst-kix_yafpiv81kxtx-2&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-2;
+}
+
+.lst-kix_yafpiv81kxtx-5&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-5,lower-roman) ". ";
+}
+
+.lst-kix_faxi48zftr1b-4&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-4,lower-latin) ". ";
+}
+
+.lst-kix_yafpiv81kxtx-3&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-3,decimal) ". ";
+}
+
+.lst-kix_xjejb3c1266-8&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-8,lower-roman) ". ";
+}
+
+.lst-kix_ahomm8elgr33-8&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-8;
+}
+
+.lst-kix_yafpiv81kxtx-1&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-1,lower-latin) ". ";
+}
+
+.lst-kix_xjejb3c1266-6&gt;li:before {
+  content: "" counter(lst-ctn-kix_xjejb3c1266-6,decimal) ". ";
+}
+
+ol.lst-kix_faxi48zftr1b-5.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-5 0;
+}
+
+.lst-kix_faxi48zftr1b-0&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-0,decimal) ". ";
+}
+
+.lst-kix_faxi48zftr1b-2&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-2,lower-roman) ". ";
+}
+
+ol.lst-kix_xjejb3c1266-5.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-5 0;
+}
+
+.lst-kix_yafpiv81kxtx-1&gt;li {
+  counter-increment: lst-ctn-kix_yafpiv81kxtx-1;
+}
+
+.lst-kix_xjejb3c1266-0&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-0;
+}
+
+ol.lst-kix_ahomm8elgr33-0.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-0 0;
+}
+
+.lst-kix_faxi48zftr1b-6&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-6,decimal) ". ";
+}
+
+.lst-kix_yafpiv81kxtx-7&gt;li:before {
+  content: "" counter(lst-ctn-kix_yafpiv81kxtx-7,lower-latin) ". ";
+}
+
+.lst-kix_faxi48zftr1b-8&gt;li:before {
+  content: "" counter(lst-ctn-kix_faxi48zftr1b-8,lower-roman) ". ";
+}
+
+.lst-kix_faxi48zftr1b-5&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-5;
+}
+
+.lst-kix_xjejb3c1266-7&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-7;
+}
+
+ol.lst-kix_ahomm8elgr33-3.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-3 0;
+}
+
+.lst-kix_i9vpxq3h8iw9-2&gt;li:before {
+  content: "\0025a0  ";
+}
+
+.lst-kix_yjlplppjahlv-1&gt;li:before {
+  content: "\0025cb  ";
+}
+
+ol.lst-kix_yafpiv81kxtx-6.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-6 0;
+}
+
+.lst-kix_i9vpxq3h8iw9-0&gt;li:before {
+  content: "\0025cf  ";
+}
+
+ol.lst-kix_faxi48zftr1b-7.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-7 0;
+}
+
+ol.lst-kix_xjejb3c1266-3.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-3 0;
+}
+
+.lst-kix_faxi48zftr1b-4&gt;li {
+  counter-increment: lst-ctn-kix_faxi48zftr1b-4;
+}
+
+.lst-kix_xjejb3c1266-1&gt;li {
+  counter-increment: lst-ctn-kix_xjejb3c1266-1;
+}
+
+.lst-kix_ahomm8elgr33-2&gt;li {
+  counter-increment: lst-ctn-kix_ahomm8elgr33-2;
+}
+
+ol.lst-kix_yafpiv81kxtx-5.start {
+  counter-reset: lst-ctn-kix_yafpiv81kxtx-5 0;
+}
+
+ol.lst-kix_faxi48zftr1b-6.start {
+  counter-reset: lst-ctn-kix_faxi48zftr1b-6 0;
+}
+
+ol.lst-kix_xjejb3c1266-4.start {
+  counter-reset: lst-ctn-kix_xjejb3c1266-4 0;
+}
+
+ol.lst-kix_ahomm8elgr33-2.start {
+  counter-reset: lst-ctn-kix_ahomm8elgr33-2 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+table td,table th {
+  padding: 0;
+}
+
+.c1 {
+  background-color: #ffffff;
+  font-size: 10pt;
+  color: #0000cc;
+  text-decoration: underline;
+}
+
+.c4 {
+  color: #1155cc;
+  text-decoration: underline;
+}
+
+.c11 {
+  padding: 0;
+  margin: 0;
+}
+
+.c3 {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.c9 {
+  margin-left: 72pt;
+  padding-left: 0pt;
+}
+
+.c5 {
+  margin-left: 36pt;
+  padding-left: 0pt;
+}
+
+.c2 {
+  font-weight: bold;
+}
+
+.c0 {
+  font-style: italic;
+}
+
+.c7 {
+  font-size: 10pt;
+}
+
+.c10 {
+  font-size: 18pt;
+}
+
+.c8 {
+  background-color: #ffffff;
+}
+
+.c6 {
+  text-indent: 36pt;
+}
+
+.title {
+  padding-top: 24pt;
+  color: #000000;
+  font-weight: bold;
+  font-size: 36pt;
+  padding-bottom: 6pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+.subtitle {
+  padding-top: 18pt;
+  color: #666666;
+  font-size: 24pt;
+  padding-bottom: 4pt;
+  font-family: "Georgia";
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+li {
+  color: #000000;
+  font-size: 11pt;
+  font-family: "Arial";
+}
+
+p {
+  margin: 0;
+  color: #000000;
+  font-size: 11pt;
+  font-family: "Arial";
+}
+
+h1 {
+  padding-top: 24pt;
+  color: #000000;
+  font-weight: bold;
+  font-size: 18pt;
+  padding-bottom: 6pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+h2 {
+  padding-top: 18pt;
+  color: #000000;
+  font-weight: bold;
+  font-size: 14pt;
+  padding-bottom: 4pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+h3 {
+  padding-top: 14pt;
+  color: #666666;
+  font-weight: bold;
+  font-size: 12pt;
+  padding-bottom: 4pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+h4 {
+  padding-top: 12pt;
+  color: #666666;
+  font-size: 11pt;
+  padding-bottom: 2pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+h5 {
+  padding-top: 11pt;
+  color: #666666;
+  font-weight: bold;
+  font-size: 10pt;
+  padding-bottom: 2pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
+
+h6 {
+  padding-top: 10pt;
+  color: #666666;
+  font-size: 10pt;
+  padding-bottom: 2pt;
+  font-family: "Arial";
+  line-height: 1.15;
+  page-break-after: avoid;
+  font-style: italic;
+  orphans: 2;
+  widows: 2;
+  text-align: left;
+}
