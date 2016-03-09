@@ -1,0 +1,118 @@
+/* "Google Publishing" -> books scanned and output as ePub by Google */
+
+/* All styles injected in <head> */
+
+.frontmatter_header {
+  font-size:1.2em;
+  font-weight:bold;
+}
+  
+.frontmatter_body {
+  font-size:1em;
+}
+
+.flow {
+  margin: 0;
+  font-size: 1em;
+}
+.flow .pagebreak {
+  page-break-before: always;
+}
+.flow p {
+  text-align: left;
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+/* text-indent added using style="text-indent:1em; */
+/* align:center added using style="text-align:center;text-indent:0;" */
+/* align:right added using style="text-align:right;margin-right:1em;" */
+/* Justification added using style="text-align:justify;" */
+
+.flow .gstxt_sup {
+  font-size: 75%;
+  position: relative;
+  bottom: 0.5em;
+}
+.flow .gstxt_sub {
+  font-size: 75%;
+  position: relative;
+  top: 0.3em;
+}
+.flow .gstxt_hlt {
+  background-color: yellow;
+}
+.flow div.gtxt_inset_box {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  margin: 1em 1em 1em 1em;
+  border: 1px black solid;
+}
+.flow div.gtxt_footnote {
+  padding: 0 0.5em 0 0.5em;
+  border: 1px black dotted;
+}
+.flow .gstxt_underline {
+  text-decoration: underline;
+}
+.flow .gtxt_heading {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 150%;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+.flow .gtxt_h1_heading {
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+}
+.flow .gtxt_h2_heading {
+  font-size: 110%;
+  font-weight: bold;
+}
+.flow .gtxt_h3_heading {
+  font-weight: bold;
+}
+.flow .gtxt_lineated {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+}
+.flow .gtxt_lineated_code {
+  margin-left: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+.flow .gtxt_quote {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gtxt_list_entry {
+  margin-left: 2ex;
+  text-indent: -2ex;
+}
+.flow .gimg_graphic {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow .gimg_table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.flow {
+  font-family: serif;
+}
+.flow span,p {
+  font-family: inherit;
+}
+
+/* margins added using style="margin(-side): [number]em;" */
+/* italic added using style="font-style:italic;" (span or div or p) */
+/* small-caps added using style="font-variant:small-caps;" (span or div or p) */
+/* bold added using style="font-weight: bold;" (span or div or p) */
+/* for images, style="max-width:100%; max-height:100%" */
