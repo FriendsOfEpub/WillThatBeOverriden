@@ -1,0 +1,716 @@
+/* Stripped from version 1 of “The Swift Programming Language” 
+The most recent eBooks/versions published by Apple iBooks are now DRM-protected */
+
+* {-webkit-hyphens:none;}
+.p { color: rgba(0, 0, 0, 1); } /* Plain text */
+.c { color: rgba(0, 131, 18, 1); }  /* Comment */
+.err { }         /* Error */
+.k { color: rgba(170, 13, 145, 1); }   /* Keyword */
+.o { color: rgba(0, 0, 0, 1); }                      /* Operator */
+.cm { color: rgba(0, 116, 0, 1); } /* Comment.Multiline */
+.cp { color: rgba(100, 56, 32, 1); }                     /* Comment.Preproc */
+.c1 { color: rgba(0, 116, 0, 1); } /* Comment.Single */
+.cs { color: rgba(0, 116, 0, 1); } /* Comment.Special */
+.gd { color: #A00000; }                     /* Generic.Deleted */
+.ge { font-style: italic; }                 /* Generic.Emph */
+.gr { color: #FF0000; }                     /* Generic.Error */
+.gh { color: #000080; font-weight: bold; }  /* Generic.Heading */
+.gi { color: #00A000; }                     /* Generic.Inserted */
+.go { color: #808080; }                     /* Generic.Output */
+.gp { color: #000080; font-weight: bold; }  /* Generic.Prompt */
+.gs { font-weight: bold; }                  /* Generic.Strong */
+.gu { color: #800080; font-weight: bold; }  /* Generic.Subheading */
+.gt { color: #0040D0; }                     /* Generic.Traceback */
+.kc { color: rgba(170, 13, 145, 1); }  /* Keyword.Constant */
+.kd { color: rgba(170, 13, 145, 1); }  /* Keyword.Declaration */
+.kp { color: rgba(170, 13, 145, 1); }                     /* Keyword.Pseudo */
+.kr { color: rgba(170, 13, 145, 1); }  /* Keyword.Reserved */
+.kt { color: rgba(184, 51, 161, 1); }                     /* Keyword.Type */
+.m { color: rgba(28, 0, 207, 1); }                      /* Literal.Number */
+.s { color: rgba(196, 26, 22, 1); }         /* Literal.String */
+.n {color: rgba(111, 65, 167, 1) }      /* Name.Default */
+.na { color: rgba(131, 48, 30, 1); }                     /* Name.Attribute */
+.nb { color: rgba(170, 13, 145, 1); }                     /* Name.Builtin */
+.nc { color: rgba(63, 110, 116, 1); }  /* Name.Class */
+.no { color: rgba(38, 71, 75, 1); }                     /* Name.Constant */
+.nd { color: #AA22FF; }                     /* Name.Decorator */
+.ni { color: #999999; font-weight: bold; }  /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold; }  /* Name.Exception */
+.nf { color: rgba(0, 0, 0, 1); }                     /* Name.Function */
+.nl { color: rgba(46, 13, 110, 1); }                     /* Name.Label */
+.nn { color: #0000FF; font-weight: bold; }  /* Name.Namespace */
+.nt { color: #008000; font-weight: bold; }  /* Name.Tag */
+.nv { color: #19177C; }                     /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold; }  /* Operator.Word */
+.w { color: #bbbbbb; }                      /* Text.Whitespace */
+.mf { color: rgba(28, 0, 207, 1); }                     /* Literal.Number.Float */
+.mh { color: rgba(28, 0, 207, 1); }                     /* Literal.Number.Hex */
+.mi { color: rgba(28, 0, 207, 1); }                     /* Literal.Number.Integer */
+.mo { color: rgba(28, 0, 207, 1); }                     /* Literal.Number.Oct */
+.sb { color: rgba(196, 26, 22, 1); }                     /* Literal.String.Backtick */
+.sc { color: rgba(196, 26, 22, 1); }                     /* Literal.String.Char */
+.sd { color: rgba(196, 26, 22, 1); } /* Literal.String.Doc */
+.s2 { color: rgba(196, 26, 22, 1); }                     /* Literal.String.Double */
+.se { color: rgba(196, 26, 22, 1); }  /* Literal.String.Escape */
+.sh { color: rgba(196, 26, 22, 1); }                     /* Literal.String.Heredoc */
+.si { color: rgba(196, 26, 22, 1); }  /* Literal.String.Interpol */
+.sx { color: rgba(196, 26, 22, 1); }                     /* Literal.String.Other */
+.sr { color: rgba(196, 26, 22, 1); }                     /* Literal.String.Regex */
+.s1 { color: rgba(196, 26, 22, 1); }                     /* Literal.String.Single */
+.ss { color: rgba(196, 26, 22, 1); }                     /* Literal.String.Symbol */
+.bp { color: #008000; }                     /* Name.Builtin.Pseudo */
+.vc { color: rgba(80, 129, 135, 1)}                     /* Name.Variable.Class */
+.vg { color: #19177C; }                     /* Name.Variable.Global */
+.vi { color: #19177C; }                     /* Name.Variable.Instance */
+.il { color: rgba(28, 0, 207, 1); }                     /* Literal.Number.Integer.Long */
+
+body {
+  font-size: 0.7em;
+  font-family: iBooks_Iowan_Old_Style;
+  /*line-height: 16px;*/
+  line-height: 1.6em;
+}
+
+.chapter-name {
+  -webkit-margin-before: 0;
+  /*line-height: 24px;*/
+  line-height: 1.8em;
+}
+
+.para {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  margin-top: 3px;
+  margin-bottom: 12px;
+}
+
+.section > .para {
+  margin-bottom: 15px;
+}
+
+.chapter a:visited, a {
+  color: rgba(0,136,204,1);
+}
+
+.section {
+  /*page-break-inside: avoid;*/
+}
+
+.chapter .section > h3.section-name {
+    /*line-height: 21px;*/
+    font-size: 1.4em;
+  line-height: 1.4em;
+}
+
+.chapter .section > .section > h3.section-name {
+    /*line-height: 19px;*/
+    font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+.section-name {
+  -webkit-margin-after: 0em;
+  page-break-after: avoid; /* won't work until <rdar://problem/11745659> iBooks wants page-break-after: avoid; support */
+}
+
+.chapter > .section > h3.section-name {
+  font-size: 1.3em;
+}
+
+.task-name {
+  margin-top: 15px;
+}
+
+#conceptual_flow_with_tasks ul.list-bullet {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+#conceptual_flow_with_tasks ul.list-bullet li.item::before {
+  color: rgba(65,65,65,1);
+  content: "\02022";
+  left: 0;
+  position: absolute;
+}
+
+#conceptual_flow_with_tasks ul.list-bullet li.item {
+  list-style-type: none;
+  padding-left: 1.3em;
+  position: relative;
+}
+
+#conceptual_flow_with_tasks .item p {
+  margin: 0;
+  padding-bottom: 6px;
+}
+
+/*** TWO COLUMN LAYOUT STYLES ***/
+
+#conceptual_flow_with_tasks .two-columns-table {
+  clear: both;
+  display: table; /*inline-block*/
+  margin: 20px auto;
+  vertical-align: middle;
+  width: 85%;
+  page-break-inside: avoid;
+}
+
+#conceptual_flow_with_tasks .two-columns-table .left-column,
+#conceptual_flow_with_tasks .two-columns-table .right-column {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#conceptual_flow_with_tasks .left-column .image,
+#conceptual_flow_with_tasks .right-column .image {
+  width: 50%;
+  min-width: 50%;
+}
+
+#conceptual_flow_with_tasks .right-column.left-align {
+  width: 100%;
+}
+
+#conceptual_flow_with_tasks .right-column.left-align .para {
+  color: rgba(128, 128, 128, 1);
+}
+
+#conceptual_flow_with_tasks .two-columns .inline-graphic {
+  margin: 25px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+#conceptual_flow_with_tasks .two-columns .para {
+  clear: both;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/*** RECOMMEND/DONT RECOMMEND STYLES ***/
+
+#conceptual_flow_with_tasks .rec-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 95%;
+  display: inline-table;
+  page-break-inside: avoid;
+  /*page-break-before: always;*/
+}
+
+#conceptual_flow_with_tasks .rec-container .blurb {
+  text-align: center;
+}
+
+#conceptual_flow_with_tasks .rec-container .blurb .para:nth-child(1) {
+  color: rgba(128, 128, 128, 1);
+  font-weight: 100;
+  line-height: 120%;
+  margin: 0 auto 20px auto;
+  width: 460px;
+}
+
+#conceptual_flow_with_tasks .rec-container .blurb .para {
+  margin-bottom: 20px;
+  page-break-inside: avoid;
+}
+
+#conceptual_flow_with_tasks .rec-container .left-container,
+#conceptual_flow_with_tasks .rec-container .right-container {
+  display: table-cell;
+  margin-top: 0px;
+  page-break-inside: avoid;
+  vertical-align: top;
+}
+
+#conceptual_flow_with_tasks .rec-container .left-container {
+  padding-right: 10px;
+}
+#conceptual_flow_with_tasks .rec-container .right-container {
+  padding-left: 10px;
+}
+#conceptual_flow_with_tasks .rec-container .container-label {
+  margin-bottom: 10px;
+}
+
+#conceptual_flow_with_tasks .rec-container .do {
+  color: rgba(17, 183, 40, 1);
+}
+
+#conceptual_flow_with_tasks .rec-container .do-not {
+  color: rgba(208, 50, 54, 1);
+}
+
+#conceptual_flow_with_tasks .rec-container .recommended {
+  color: rgba(40, 103, 206, 1);
+}
+
+#conceptual_flow_with_tasks .rec-container .not-recommended {
+  color: rgba(255, 133, 0, 1);
+}
+
+#conceptual_flow_with_tasks .rec-container .inline-graphic {
+  margin: 10px auto;
+  /*max-width: 80%;*/
+  /*max-width: 200px;*/
+  width: 200px;
+}
+
+/*** CODE LINES AND CODE LISTNG STYLES ***/
+
+#conceptual_flow_with_tasks .code-voice {
+  color: rgba(128, 128, 128, 1);
+  font-family: Menlo, monospace !important;
+  font-size: 0.85em;
+  /*word-wrap: break-word;*/
+}   
+
+#conceptual_flow_with_tasks .code-listing {
+  background-clip: padding-box;
+  margin: 20px 0;
+  text-align: left;
+  page-break-inside: avoid;
+}
+
+#conceptual_flow_with_tasks .z_code_lines_container_for_numbered_lines {
+  margin: 10px 0;
+  padding: 0;
+}
+
+#conceptual_flow_with_tasks .code-listing .caption {
+  caption-side: top;
+  display: none;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+#conceptual_flow_with_tasks .code-sample {
+  display: block;
+  margin-left: 21px;
+}
+
+#conceptual_flow_with_tasks .code-lines {
+  background-color: rgba(255, 255, 255, 1);
+  counter-reset: li;
+  line-height: 0.8em;
+  list-style: none;
+  margin: 0 0 0 20px;
+  padding: 0;
+  -webkit-hyphens:none;
+}
+
+#conceptual_flow_with_tasks pre {
+  white-space: pre-wrap;
+  line-height: 2.5;
+  margin: 0;
+  /* <rdar://problem/16997230> TSPL EPUB: Wrapped lines should indent 8 spaces */
+  text-indent: -4.2em;
+  margin-left: 4.2em;
+}
+
+#conceptual_flow_with_tasks .code-lines li:before {
+  color: rgba(128, 128, 128, 1);
+  content: counter(li);
+  counter-increment: li;
+  margin-right: 10px;
+}
+
+.z_code_lines_container_for_numbered_lines .code-lines li {
+  font-size: 0.8em;
+  font-style: inherit;
+}
+
+.svg-container {
+  position: relative;
+}
+
+.svg-play-button {
+  background: url('playbutton.svg') no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  pointer-events: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+}
+.svg-play-button.faded {
+  opacity: 0;
+}
+
+/*** TABLE STYLES ***/
+
+/* styles for div class tableholder */
+#conceptual_flow_with_tasks .tableholder {
+  font-size: 0.8em;
+}
+
+#conceptual_flow_with_tasks .tablecaption {
+  caption-side: top;
+  font-size: 0.8em;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+#conceptual_flow_with_tasks ol .tablecaption {
+}
+
+#conceptual_flow_with_tasks .caption-number {
+  padding-right: .4em;
+}
+
+#conceptual_flow_with_tasks .graybox {
+  border: 1px solid rgba(238, 238, 238, 1);
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: hide;
+  margin: 20px 0 36px 0;
+  text-align: left;
+  width: 100%;
+  page-break-inside: avoid;
+}
+
+#conceptual_flow_with_tasks .graybox p {
+  margin: 0;
+}
+
+#conceptual_flow_with_tasks .TableHeading_TableRow_TableCell {
+  padding: 5px 10px;
+  border-left: 1px solid rgba(238, 238, 238, 1);
+  background-color: rgba(249, 249, 249, 1);
+  white-space: normal;
+}
+
+#conceptual_flow_with_tasks .graybox tbody tr td p:first-of-type {
+  margin-top: 0;
+}
+
+#conceptual_flow_with_tasks .graybox tbody tr td p {
+  margin-top: 10px;
+}
+
+#conceptual_flow_with_tasks .graybox tbody tr td p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* need to apply a class to td so that we are not styling the tag */
+#conceptual_flow_with_tasks td { 
+  border: 1px solid rgba(238, 238, 238, 1);
+  padding: 5px 25px 5px 10px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+#conceptual_flow_with_tasks .row-heading {
+  background-color: rgba(249, 249, 249, 1);
+}
+
+/*** ASIDE (NOTE, IMPORTANT, WARNING) STYLES ***/
+
+#conceptual_flow_with_tasks .aside-title {
+  color: rgba(128, 128, 128, 1);
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  -webkit-margin-before: 0;
+}
+
+#conceptual_flow_with_tasks .aside-title.uppercase {
+  text-transform: uppercase;
+}
+
+#conceptual_flow_with_tasks .tip,
+#conceptual_flow_with_tasks .warning,
+#conceptual_flow_with_tasks .important,
+#conceptual_flow_with_tasks .note {
+  background-color: rgba(249, 249, 249, 1);
+  border-left: 5px solid rgba(238, 238, 238, 1);
+  color: rgba(0, 0, 0, 1);
+  font-size: 1em;
+  line-height: 1.3em;
+  margin: 30px auto 35px auto;
+  padding: 15px 15px 7px 15px;
+  width: 90%;
+  page-break-inside: avoid;
+}
+
+#conceptual_flow_with_tasks .note .para,
+#conceptual_flow_with_tasks .important .para,
+#conceptual_flow_with_tasks .tip .para,
+#conceptual_flow_with_tasks .warning .para {
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+#conceptual_flow_with_tasks .note {
+  border-left: 5px solid rgba(238, 238, 238, 1);
+}
+
+#conceptual_flow_with_tasks .important {
+  border-left: 5px solid rgba(128, 128, 128, 1);
+}
+
+#conceptual_flow_with_tasks .tip {
+  border-left: 5px solid rgba(238, 238, 238, 1);
+}
+
+#conceptual_flow_with_tasks .warning {
+  border-left: 5px solid rgba(247, 235, 97, 1);
+}
+
+#conceptual_flow_with_tasks .introduction .aside-title {
+  color: auto;
+  letter-spacing: auto;
+  margin-bottom: 0;
+  text-transform: none;
+  -webkit-margin-before: 0;
+}
+
+#conceptual_flow_with_tasks .introduction .note {
+  display: none;
+  background-color: transparent;
+  border-left: none;
+  color: auto;
+  margin: auto;
+  padding: auto;
+  width: auto;
+  page-break-inside: avoid;
+}
+
+#conceptual_flow_with_tasks .introduction .note .para {
+  margin-bottom: 0;
+}
+
+.inline-graphic, .figure {
+  max-width: 60%;
+  page-break-inside: avoid;
+  margin: 25px auto;
+}
+
+/*** CODE LINES AND CODE LISTNG STYLES ***/
+
+#conceptual_flow_with_tasks .item .code-listing {
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+#conceptual_flow_with_tasks > .content-wrapper > .chapter > .section > .list-number > .item > .code-listing {
+  padding-top: 0;
+  padding-bottom: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#conceptual_flow_with_tasks li.item .term-definition .definition {
+  margin-left: 0;
+}
+
+#conceptual_flow_with_tasks dl.termdef dt.term {
+  position: relative;
+  top: 7px;
+}
+
+#conceptual_flow_with_tasks .code-lines {
+  background-color: rgba(255, 255, 255, 1);
+  counter-reset: li;
+  line-height: 1.6em;
+  list-style: none;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+#conceptual_flow_with_tasks .code-listing .code-sample .code-lines {
+  margin-left: 0;
+}
+
+#conceptual_flow_with_tasks .code-lines li::before {
+  color: rgba(128, 128, 128, 1);
+  content: counter(li);
+  counter-increment: li;
+  font-family: Menlo, monospace;
+  font-size: 0.9em;
+  margin-right: 1.7em;
+  -webkit-user-select: none;
+}
+
+#conceptual_flow_with_tasks .code-lines li {
+  border-left: 2px solid rgb(238,238,238);
+  /* <rdar://problem/16997230> TSPL EPUB: Wrapped lines should indent 8 spaces */
+  padding-left: 3.5rem;
+  text-indent: -4.2rem;
+  white-space: pre-wrap;
+}
+
+#conceptual_flow_with_tasks .code-lines li code, code {
+  font-family: Menlo, monospace;
+}
+
+#conceptual_flow_with_tasks .code-lines li .code-voice {
+  color: rgba(0, 0, 0, 1);
+}
+
+#conceptual_flow_with_tasks .code-lines li:only-of-type::before {
+  color: rgba(255, 255, 255, 1);
+  content: ' ';
+}
+
+#conceptual_flow_with_tasks .code-lines li:only-of-type {
+  color: rgba(255, 255, 255, 1);
+  content: ' ';
+  border-left-color: transparent;
+}
+
+/* fix for double-digit code listing numbers */
+#conceptual_flow_with_tasks .code-lines li:nth-child(n+10) {
+  text-indent: -6.55em;
+}
+
+/* box for grammar */
+#conceptual_flow_with_tasks .syntax-defs { 
+  border-left: 5px solid rgba(233, 233, 233, 1);
+  margin: 20px 0;
+  padding-left: 15px;
+  /*line-height: 145%;*/
+  line-height: 1.3em;
+  page-break-inside: avoid;
+}
+
+/* "grammar of..." */
+#conceptual_flow_with_tasks .syntax-defs-name {
+  color: rgba(128, 128, 128, 1);
+  font-size: 0.63em;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* to the left of the arrow */
+#conceptual_flow_with_tasks .syntax-def-name {
+  color: rgba(128, 128, 128, 1);
+  font-style: italic;
+  text-decoration: none;
+}
+
+#conceptual_flow_with_tasks .arrow {
+  color: rgba(128, 128, 128, 1);
+  padding: 0 0 0 4px;
+}
+
+/* group of rules within syntax-defs box */
+#conceptual_flow_with_tasks .syntax-defs-group { 
+  margin-bottom: 12px;
+}
+
+/* formal grammar rule */
+#conceptual_flow_with_tasks .syntax-defs-group .syntax-def {
+  margin-bottom: 0;
+  margin-top: 0;
+  text-indent: -20px;
+  margin-left: 20px;
+}
+
+/* right side of arrow, clickable to jump to def */
+#conceptual_flow_with_tasks .syntactic-cat {
+  font-style: italic;
+  padding: 0 4px;
+}
+
+/* list, so li styling, should have a bar between with whitespace  */
+
+#conceptual_flow_with_tasks .alternatives_para {
+  display: inline;
+}
+
+#conceptual_flow_with_tasks .alternatives {
+  display: inline;
+  list-style: none;
+}
+
+/* one of a list, no need to style? maybe this is where the whitespace goes */
+#conceptual_flow_with_tasks .alternative {
+  display: inline;
+}
+
+#conceptual_flow_with_tasks .alternative:not(:last-of-type)::after {
+  color: rgba(128, 128, 128, 1);
+  content: "|";
+  font-weight: 100;
+  padding: 0 2px;
+  position: relative;
+  vertical-align: initial;
+}
+
+/* "opt" in subscript? */ 
+#conceptual_flow_with_tasks .subscript {
+  color: rgba(128, 128, 128, 1);
+  font-size: 0.8em;
+  font-style: italic;
+  margin-left: -2px;
+  padding-right: 4px;
+  vertical-align: sub;
+}
+
+/* Like code voice. Refers to text in a formal grammar rule that literally appears in the source code. */
+#conceptual_flow_with_tasks .literal {
+  color: rgba(0, 0, 0, 1);
+  font-family: Menlo, monospace;
+  font-weight: 600;
+  font-size: 0.86em;
+  padding: 0 4px;
+  word-wrap: break-word;
+}
+
+/* code outline stuff */
+
+#conceptual_flow_with_tasks .code-outline {
+  margin: 20px 0 20px 10px;
+  text-align: left;
+  display: block;
+  page-break-inside: avoid;
+}
+
+#conceptual_flow_with_tasks .code-outline-lines {
+  list-style-type: none;
+  font-size: 1em;
+  padding-left: 2.0em;
+}
+
+#conceptual_flow_with_tasks .code-outline-lines code {
+  font-family: Menlo, monospace;
+}
+
+#conceptual_flow_with_tasks .code-outline-lines .code-voice {
+  color: #000;
+}
+
+/* bubble (colors taken from xcode) */
+#conceptual_flow_with_tasks .code-outline .variable-text {
+  background-color: rgba(233, 239, 250, 1);
+  border: 1px solid rgba(196, 212, 241, 1);
+  border-radius: 50px;
+  color: rgba(0, 0, 0, 1);
+  padding: 2px 6px;
+  font-style: inherit;
+  white-space: nowrap;
+}
+
+svg {
+    height: 0;
+    width: 0;
+}
+
+.part {
+    page-break-after: always
+    page-break-before: always;
+}
+
+.part .chapter-name {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 55%;
+}
