@@ -28,14 +28,14 @@ button, input[type="button"] {
 /* OK so Kindle is a hardcore one. Let's explain how they are doing it.
 Basically, it seems that Amazon is now using and deploying its Kindle Cloud Reader (iOS but also KFX). 
 It is based on jQuery and default styles + overrides are to be found in their renderer.min.js.
-There are conditions everywhere and styles will be dynamically applied
-based on device, device perf and specific issues, CSS Regions support, language, user settings, etc.
+There are conditions everywhere and styles will be dynamically applied based on 
+device, device perf and specific issues, CSS Regions support, language, user settings, etc.
 As a matter of fact, it takes 8000+ lines of JS to get to the stylesheets.
-My understanding is that they are using that in combo of KindleGen/KFX-converter or, in the case of Kindle iOS, which
-is using a bridge.min.js to convert your file from AZK to KCR, the embedded "html-css-sanitizer".
+My understanding is that they are using that in combo with KindleGen/KFX-converter or, in the case of Kindle iOS, 
+which is using a bridge.min.js to convert your file from AZK to KCR, the embedded "html-css-sanitizer".
 
 I'll do my best to translate that to readable CSS. I might be wrong in some cases… so if anyone wants to help, I'll be
-glad to open the pandora's box for him/her (beware, there's like 13 000 lines of JS to parse).
+glad to open the Pandora's box for him/her (beware, there's like 13 000 lines of JS to parse).
 */
 
 
@@ -72,7 +72,7 @@ body {
 
 /* Default line-height based on language */
 body {
-	line-height: {KindleRendererLanguageOptions.getLineHeight};		/* 1.75 for all languages except chinese (1.4) */
+	line-height: {KindleRendererLanguageOptions.getLineHeight};	/* 1.75 for all languages except chinese (1.4) */
 }
 
 body {
@@ -271,7 +271,7 @@ div#content-overlays {
 	padding: 0px;
 }
 
-/* Then the renderer begins Content Sanitization for: 
+/* Then the renderer begins Content Sanitization on the fly for: 
 - float
 - position
 - width and height (in both % or fixed values — they have an index for that)
@@ -364,9 +364,9 @@ Check file Renderer-utilities.txt	*/
 
 
 
-/* And now, ladies and gentlemen, to the "html-css-sanitizer-minified.js" part 
+/* And now, ladies and gentlemen, to the "html-css-sanitizer.min.js" part 
 
-So, simply, CSS values are declared as groups in a var in the following order:
+So, to put it simply, CSS values are declared as groups in a var in the following order:
 Check values.txt for a complete list of values
 
 - [color] (keywords)
@@ -413,7 +413,7 @@ Then they check selectors.
 (link|visited) are not OK
 
 Then they check media-queries:
-				'braille': allowed,
+		'braille': allowed,
                 'embossed': allowed,
                 'handheld': allowed,
                 'print': allowed,
