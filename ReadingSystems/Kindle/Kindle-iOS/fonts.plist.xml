@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Default</key>
+	<dict>
+		<key>Default Font</key>
+		<string>Georgia</string>
+		<key>Font Menu Enabled</key>
+		<true/>
+		<key>Fonts</key>
+		<array>
+			<dict>
+				<key>Bold Font Family</key>
+				<string>Baskerville-Bold</string>
+				<key>Customer Facing Name</key>
+				<string>Baskerville</string>
+				<key>Font Family</key>
+				<string>Baskerville</string>
+			</dict>
+			<dict>
+				<key>Bold Font Family</key>
+				<string>PMNCaeciliaLT-Bold</string>
+				<key>Customer Facing Name</key>
+				<string>Caecilia</string>
+				<key>Font Family</key>
+				<string>PMN Caecilia LT</string>
+			</dict>
+			<dict>
+				<key>Bold Font Family</key>
+				<string>Georgia-Bold</string>
+				<key>Customer Facing Name</key>
+				<string>Georgia</string>
+				<key>Font Family</key>
+				<string>Georgia</string>
+			</dict>
+			<dict>
+				<key>Bold Font Family</key>
+				<string>Helvetica-Bold</string>
+				<key>Customer Facing Name</key>
+				<string>Helvetica</string>
+				<key>Font Family</key>
+				<string>Helvetica</string>
+			</dict>
+			<dict>
+				<key>Bold Font Family</key>
+				<string>Palatino-Bold</string>
+				<key>Customer Facing Name</key>
+				<string>Palatino</string>
+				<key>Font Family</key>
+				<string>Palatino</string>
+			</dict>
+			<dict>
+				<key>Bold Font Family</key>
+				<string></string>
+				<key>Customer Facing Name</key>
+				<string>Publisher Font</string>
+				<key>Font Family</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>Selected Font Key</key>
+		<string>FontName</string>
+	</dict>
+	<key>ja</key>
+	<dict>
+		<key>Default Font</key>
+		<string>HiraMinProN-W3</string>
+		<key>Font Menu Enabled</key>
+		<true/>
+		<key>Fonts</key>
+		<array>
+			<dict>
+				<key>Bold Font Family</key>
+				<string>HiraKakuProN-W6</string>
+				<key>Customer Facing Name</key>
+				<string>ゴシック</string>
+				<key>Font Family</key>
+				<string>HiraKakuProN-W3</string>
+			</dict>
+			<dict>
+				<key>Bold Font Family</key>
+				<string>HiraMinProN-W6</string>
+				<key>Customer Facing Name</key>
+				<string>明朝</string>
+				<key>Font Family</key>
+				<string>HiraMinProN-W3</string>
+			</dict>
+		</array>
+		<key>Selected Font Key</key>
+		<string>JPFontName</string>
+	</dict>
+	<key>zh</key>
+	<dict>
+		<key>Default Font</key>
+		<string>Heiti SC</string>
+		<key>Font Menu Enabled</key>
+		<false/>
+		<key>Fonts</key>
+		<array>
+			<dict>
+				<key>Bold Font Family</key>
+				<string>Heiti SC</string>
+				<key>Customer Facing Name</key>
+				<string>Heiti SC</string>
+				<key>Font Family</key>
+				<string>Heiti SC</string>
+			</dict>
+		</array>
+		<key>Selected Font Key</key>
+		<string>CNFontName</string>
+	</dict>
+</dict>
+</plist>
