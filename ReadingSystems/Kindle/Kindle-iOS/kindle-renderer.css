@@ -364,7 +364,8 @@ Check file Renderer-utilities.txt	*/
 
 
 
-/* And now, ladies and gentlemen, to the "html-css-sanitizer.min.js" part 
+/* And now, ladies and gentlemen, to the "html-css-sanitizer.min.js" part.
+This is probably happening at the conversion level (need confirmation)
 
 So, to put it simply, CSS values are declared as groups in a var in the following order:
 Check values.txt for a complete list of values
