@@ -1,0 +1,57 @@
+{
+    "Search": [],
+    "TOC": [],
+    "Brightness": [
+    "Brightness Slider"
+    ],
+    "Font Size" : [
+    "Font Slider"
+    ],
+    "Font Style": [
+        "Publisher Default",
+        "Arial",
+        "Times New Roman",
+        "Verdana",
+        "Courier New",
+        "Open Dyslexic",
+        "Akruti (हिंदी)"
+    ],
+    "Text Alignment": [
+        "Publisher Default",
+        "Left",
+        "Right",
+        "Justify"
+    ],
+    "Themes": [
+        "Publisher Default",
+        "Sepia",
+        "Night Mode"
+    ],
+    "Goto": [],
+    "Share": [
+        "Facebook",
+        "Twitter"
+    ],
+    "More Options": [
+        "RTL",
+        "Disable Sleep",
+        "Walking Mode"
+    ],
+     "Reader Style": [
+        "Book",
+        "Full Screen"
+    ],
+ "Sync Annotations": [
+        "Auto",
+        "Manual",
+        "Never"
+    ],
+    "Help":[],
+    "Transition Style":[
+    "None",
+    "Page Fade"
+    ]
+
+    
+
+}

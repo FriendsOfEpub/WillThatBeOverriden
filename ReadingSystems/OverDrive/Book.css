@@ -1,0 +1,150 @@
+<style>
+  @page {
+    hyphenate:auto !important;
+    size: {pageWidth}px {pageHeight}px;
+  }
+
+  * {
+    page: auto !important;
+    line-height:normal !important;
+    -webkit-box-sizing: border-box !important;
+    -webkit-text-size-adjust: {font-size}% !important;
+    box-sizing: border-box !important;
+    background: transparent;
+    background-color: transparent;
+    max-width: {pageWidth}px !important;
+    text-align: {text-align} !important;
+    word-break: break-word !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    font-family: "{font-family}" !important;
+    text-align: {text-align} !important;
+  }
+
+  h1, h2, h3, h4, h5 {
+    -webkit-column-break-inside: avoid !important;
+    column-break-inside: avoid !important;
+  }
+
+  div, p {
+    color: #000;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    max-width: {columnWidth}px !important;
+  }
+
+  body {
+    background: transparent !important;
+    background-color: transparent !important;
+    font-size: 100% !important;
+    text-indent: 0px;
+    text-align: {text-align} !important;
+    height: auto !important;
+  }
+
+  body div, body p {
+    font-size: 100% !important;
+  }
+
+  body: first-child {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html: first-child {
+    margin:0 !important;padding:0 !important;
+  }
+
+  html {
+    color: #000 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    width: 100% !important;
+    max-height: {pageHeight}px !important;
+    min-height: {pageHeight}px !important;
+    -webkit-column-width: {columnWidth}px !important;
+    -webkit-column-gap: 0 !important;
+    -webkit-column-rule: 0 solid black !important;
+    column-width: {columnWidth}px !important;
+    column-gap: 0 !important;
+    column-rule: 0 solid black !important;
+  }
+
+  img {
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 80% !important;
+    max-height: 80% !important;
+  }
+
+  svg, svg * {
+    max-width: 80% !important;
+    max-height:80% !important
+  }
+
+  /*
+  img {
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    max-height: auto !important;
+    width: auto !important;
+    height: auto !important;
+    -webkit-column-break-inside: avoid !important;
+    column-break-inside: avoid !important;
+    -webkit-object-fit: contain !important;
+    object-fit: contain !important;
+    display: inline-block;
+  }
+
+  svg {
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    max-width: {maximumImageWidth}px !important;
+    max-height: {maximumImageHeight}px !important;
+    -webkit-column-break-inside: avoid !important;
+    column-break-inside: avoid !important;
+    display: inline-block;
+  }
+   
+  */
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  /*#EndOfChapterSpacer {
+    width: {columnWidth}px;
+    height: {endOfChapterSpacerHeight}px;
+  }*/
+
+  body {
+    margin: {margin}px !important;
+  }
+
+  *, * *, *[class], *[class] *[class] {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-color: {foreground-color} !important;
+    line-height: {line-height}% !important;
+    text-align: none !important
+  }
+
+  html, html * {
+    color: {foreground-color} !important;
+  }
+
+  a[href], a[href] * {
+    color: {anchor-color} !important;
+    text-decoration: underline !important;
+  }
+</style>

@@ -1,0 +1,122 @@
+@define-theme day {
+    color:              #222222;
+    background-color:   #FFFFFF;
+    a { color:          #2222FF; }
+    annotation {
+        background-color: #bde59e;
+    }
+}
+@define-theme night {
+    color:              #F0F0F0;
+    background-color:   #222222;
+    a { color:          #19CA15; }
+    annotation {
+        background-color: #bde59e;
+    }
+}
+@define-theme newspaper {
+    color:              #373028;
+    background-color:   #FCF7E5;
+    a { color:          #2222FF; }
+    annotation {
+        background-color: #bde59e;
+    }
+}
+@define-theme user_setup {
+    color:              prop("prf.css.color_font");
+    background-color:   prop("prf.css.color_background");
+    a { color:          prop("prf.css.color_link"); }
+}
+
+@define-theme serif {
+    body,annotation { font-family:      "Times New Roman", "Georgia", serif; }
+    title           { font-family:      "Arial", "Helvetica", sans-serif; }
+}
+@define-theme sans  {
+    body,annotation { font-family:      "Arial", sans-serif; }
+    title,subtitle  { font-family:      "Arial", "Helvetica", sans-serif; }
+}
+
+html                {
+    @theme            prop("prf.css.color_preset",        day);
+    @theme            prop("prf.css.font_style",          serif);
+    text-align:       prop("prf.css.para.align",          normal);
+}
+
+@page               {
+                      margin-left:      prop("prf.css.page.padding-left",  6%);
+                      margin-right:     prop("prf.css.page.padding-right", 6%);
+                      margin-top:       prop("prf.css.page.padding-top",   6%);
+                      margin-bottom:    prop("prf.css.page.padding-bottom",6%);
+}
+
+/* Some values taken from http://www.w3.org/TR/CSS21/sample.html */
+
+table               { text-indent: 0px; line-height: 1em; }
+th                  { font-weight: bolder; text-align: center; padding: 2px; }
+td                  { padding: 2px; }
+
+title               { font-style:       italic;
+                      font-size:        large;
+                      font-weight:      bold;
+                      text-align:       left;
+                      white-space:      pre-wrap;
+                      margin-top:       2em;
+                      margin-bottom:    1em;
+                      display: inline; }
+annotation          { text-indent:      2em;
+                      padding:         .5cm .5cm 1.5cm .5cm; }
+
+epigraph            { font-family:      "Times New Roman", "Georgia", serif;
+                      font-style:       italic;
+                      text-align:       end;
+                      margin-top:       1em;
+                      margin-bottom:   .5em; }
+
+subtitle            { margin-top:       1em;
+                      margin-bottom:   .5em;
+                      font-weight:      bold;
+                      display: inline;}
+title+p, subtitle+p { text-indent:      prop("prf.css.para.indent",    normal); }
+
+code                { white-space:      pre-wrap;
+                      text-align:       start;
+                      font-family:      monospace; }
+
+monospace           { font-family:      monospace; }
+
+cite                { font-family:      "Times New Roman", "Georgia", serif;
+                      font-style:       italic; }
+
+pre                 { white-space:      pre-wrap;
+                      text-align:       left; }
+br, hr              { white-space:      pre-line;
+                      text-align:       center; }
+
+h1                  { font-size: xx-large;font-weight: bold; text-align: center; }
+h2                  { font-size: x-large; font-weight: bold; text-align: center; }
+h3                  { font-size: large;   font-weight: bold; text-align: center; }
+h4                  { font-size: medium;  font-weight: bold; text-align: center; }
+h5                  { font-size: small;   font-weight: bold; text-align: center; }
+h6                  { font-size: x-small; font-weight: bold; text-align: center; }
+
+p                   { text-indent:      prop("prf.css.para.indent",    normal);
+                      margin-bottom:    prop("prf.css.para.margin",    normal);
+                      line-height:      prop("prf.css.line_spacing",   normal);
+                      white-space:      normal; }
+
+ul, ol, dl, menu, dir  { margin-left:      1em;
+                      text-indent:      prop("prf.css.para.indent",    normal);
+                      margin-bottom:    prop("prf.css.para.margin",    normal);
+                      line-height:      prop("prf.css.line_spacing",   normal);
+                      white-space:      normal;
+                      /* border:           solid 1px black; */ }
+
+strong,   b         { font-weight:      bold; }
+emphasis, i         { font-style:       italic; }
+strike              { text-decoration:  line-through; }
+u                   { text-decoration:  underline; }
+
+sup                 { font-size:       .66em;     font-offset: +.33em; }
+sub                 { font-size:       .66em;     font-offset: -.33em; }
+

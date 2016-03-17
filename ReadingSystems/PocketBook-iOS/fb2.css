@@ -1,0 +1,132 @@
+@define-theme day {
+    color:              #222222;
+    background-color:   #FFFFFF;
+    a { color:          #2222FF; }
+}
+@define-theme gray_invert {
+    color:              #222222;
+    background-color:   #FFFFFF;
+    a { color:          #2222FF; }
+}
+@define-theme night {
+    color:              #F0F0F0;
+    background-color:   #000000;
+    a { color:          #19CA15; }
+}
+@define-theme newspaper {
+    color:              #373028;
+    background-color:   #FCF7E5;
+    a { color:          #2222FF; }
+}
+@define-theme user_setup {
+    color:              prop("prf.css.color_font");
+    background-color:   prop("prf.css.color_background");
+    a { color:          prop("prf.css.color_link"); }
+}
+@define-theme texture {
+    color:              prop("prf.css.color_font");
+    background-color:   prop("prf.css.color_background");
+    a { color:          prop("prf.css.color_link"); }
+}
+
+@define-theme serif {
+    body,annotation { font-family: "Times New Roman", "Georgia", serif; }
+    title           { font-family: "Arial", "Helvetica", sans-serif; }
+    epigraph,cite   { font-family: "Times New Roman", "Georgia", serif; }
+}
+@define-theme sans  {
+    body,annotation { font-family: "Arial", sans-serif; }
+    title,subtitle  { font-family: "Arial", "Helvetica", sans-serif; }
+    epigraph,cite   { font-family: "Times New Roman", "Georgia", serif; }
+}
+@define-theme mono  {
+    body,annotation { font-family: "Courier", monospace; }
+    title,subtitle  { font-family: "Courier", monospace; }
+    epigraph,cite   { font-family: "Courier", monospace; }
+}
+
+FictionBook         {
+    @theme            prop("prf.css.color_preset",        day);
+    @theme            prop("prf.css.font_style",          serif);
+    text-align:       prop("prf.css.para.align",          normal);
+}
+
+@page               {
+                      margin-left:      prop("prf.css.page.padding-left",  6%);
+                      margin-right:     prop("prf.css.page.padding-right", 6%);
+                      margin-top:       prop("prf.css.page.padding-top",   6%);
+                      margin-bottom:    prop("prf.css.page.padding-bottom",6%);
+}
+
+body[name="notes"]  {
+    font-size:        x-small;
+    title   {
+                      font-size:        medium;
+                      font-weight:      bold;
+                      font-style:       italic;
+                      text-align:       left;
+    }
+}
+
+table               { border: solid 3px black; text-align: center; margin: 5px;}
+td,th               { border: solid 1px black; padding: 2px; box-align: center; text-indent: 0px; }
+
+body>title          { font-size:        large;
+                      color:            #cc0000;
+                      text-align:       center;
+                      white-space:      pre-wrap;
+                      margin-top:       1em;
+                      margin-bottom:    2em;
+                      font-weight:      bold; }
+poem title          { font-style:       italic;}
+
+title               { font-size:        large;
+                      font-weight:      bold;
+                      text-align:       left;
+                      white-space:      pre-wrap;
+                      margin-top:       2em;
+                      margin-bottom:    1em;
+                      display: inline; }
+annotation          { text-indent:      2em;
+                      padding:         .5cm .5cm 1.5cm .5cm; }
+
+epigraph,cite       { font-style:       italic;
+                      text-align:       end;
+                      margin-top:       1em;
+                      margin-bottom:   .5em; }
+cite>p              { text-align:       justify; }
+text-author         { font-style:       normal; }
+
+subtitle            { margin-top:       1em;
+                      margin-bottom:   .5em;
+                      font-weight:      bold;
+                      display: inline;}
+title+p, subtitle+p { text-indent:      prop("prf.css.para.indent",    normal); }
+
+empty-line          { line-height:      1em; }
+
+image               { text-align:       center; }
+
+code                { white-space:      pre-wrap;
+                      text-align:       start;
+                      font-family:      monospace; }
+
+section>p           { text-indent:      prop("prf.css.para.indent",    normal);
+                      margin-bottom:    prop("prf.css.para.margin",    normal);
+                      line-height:      prop("prf.css.line_spacing",   normal);
+                      white-space:      normal; }
+
+stanza              { margin:           1em 4%; }
+v                   { white-space:      nowrap; }
+
+strong,   b         { font-weight:      bold; }
+emphasis, i         { font-style:       italic; }
+strikethrough       { text-decoration:  line-through; }
+
+sup                 { font-size:       .66em;     font-offset: +.33em; }
+sub                 { font-size:       .66em;     font-offset: -.33em; }
+
+a[type="note"]      { font-size:       .66em;     font-offset: +.33em; }
+sup a[type="note"]  { font-size:        1em; }
+a[type="note"] sup  { font-size:        1em; }
+

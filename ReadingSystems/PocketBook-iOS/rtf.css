@@ -1,0 +1,54 @@
+@define-theme day {
+    color:              #222222;
+    background-color:   #FFFFFF;
+    a { color:          #2222FF; }
+}
+@define-theme night {
+    color:              #F0F0F0;
+    background-color:   #000000;
+    a { color:          #19CA15; }
+}
+@define-theme newspaper {
+    color:              #373028;
+    background-color:   #FCF7E5;
+    a { color:          #2222FF; }
+}
+@define-theme user_setup {
+    color:              prop("prf.css.color_font");
+    background-color:   prop("prf.css.color_background");
+    a { color:          prop("prf.css.color_link"); }
+}
+
+@define-theme serif {
+    sect { font-family: "Times New Roman", "Georgia", serif; }
+}
+@define-theme sans  {
+    sect { font-family: "Arial", sans-serif; }
+}
+@define-theme mono  {
+    sect { font-family: "Courier", monospace; }
+}
+
+rtf                 {
+    @theme            prop("prf.css.color_preset",        day);
+    @theme            prop("prf.css.font_style",          serif);
+    text-align:       prop("prf.css.para.align",          normal);
+    tab-size:         36pt;
+}
+
+@page               {
+                      margin-left:      prop("prf.css.page.padding-left",  6%);
+                      margin-right:     prop("prf.css.page.padding-right", 6%);
+                      margin-top:       prop("prf.css.page.padding-top",   6%);
+                      margin-bottom:    prop("prf.css.page.padding-bottom",6%);
+}
+
+trowd               { border: solid 3px black; text-align: center; margin: 5px; line-height: 1em;}
+cell                { border: solid 1px black; padding: 2px; box-align: center; text-indent: 0px; }
+
+image               { text-align:       center; }
+
+sect>p              { text-indent:      prop("prf.css.para.indent",    normal);
+                      margin-bottom:    prop("prf.css.para.margin",    normal);
+                      line-height:      prop("prf.css.line_spacing",   normal);
+                      white-space:      normal; }
