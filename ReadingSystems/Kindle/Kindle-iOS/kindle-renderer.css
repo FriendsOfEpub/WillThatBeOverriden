@@ -1,0 +1,432 @@
+/* kindle.css
+May not apply since it refers to "ACX" */
+
+body {
+      background-color:#FAFAFA; 
+      margin:0; 
+      padding:0; 
+      width:100%; 
+      font-family:Georgia-Bold;
+      /*This will disable select from all text/images in the ACX. We will still however get events (like click). Effectively disables selection/copy/paste of text or images*/
+      -webkit-user-select: none;
+}
+button, input[type="button"] {
+  height: 17pt;
+  border: solid 1px black;
+  background: black;
+  -webkit-border-radius: 3.45pt;
+  -moz-border-radius: 3.45pt;
+  border-radius = 3.45pt;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-family: "Helvetica";
+  font-weight: "bold";
+  font-size: "9pt";
+}
+
+/* OK so Kindle is a hardcore one. Let's explain how they are doing it.
+Basically, it seems that Amazon is now using and deploying its Kindle Cloud Reader (iOS but also KFX). 
+It is based on jQuery and default styles + overrides are to be found in their renderer.min.js.
+There are conditions everywhere and styles will be dynamically applied
+based on device, device perf and specific issues, CSS Regions support, language, user settings, etc.
+As a matter of fact, it takes 8000+ lines of JS to get to the stylesheets.
+My understanding is that they are using that in combo of KindleGen/KFX-converter or, in the case of Kindle iOS, which
+is using a bridge.min.js to convert your file from AZK to KCR, the embedded "html-css-sanitizer".
+
+I'll do my best to translate that to readable CSS. I might be wrong in some cases… so if anyone wants to help, I'll be
+glad to open the pandora's box for him/her (beware, there's like 13 000 lines of JS to parse).
+*/
+
+
+iframe {
+	/* Contents are injected in iframes, then CSS columns are used and styled dynamically depending on device size */
+}
+
+/* kindleReaderStylesheetDefaults = Mobi8 (KF8) only */
+
+html {
+	font-size: 15px;
+}
+
+table {
+	color: inherit; 
+	font-size: inherit; 
+	line-height: inherit; 
+	font-weight: inherit; 
+	font-variant:inherit; 
+	font-style:inherit; 
+	white-space: inherit; 
+	word-wrap: inherit;
+}
+
+/* If device nees writing mode specified on body */ 
+body {
+	-webkit-writing-mode: horizontal-tb;
+}
+
+/* Default Font based on language */
+body {
+	font-family: {KindleRendererLanguageOptions.getDefaultFont};
+}
+
+/* Default line-height based on language */
+body {
+	line-height: {KindleRendererLanguageOptions.getLineHeight};		/* 1.75 for all languages except chinese (1.4) */
+}
+
+body {
+	height: {computedHeight};
+}
+
+
+/* kindleReaderStylesheetOverrides */
+
+/* If mobi7 */
+body {
+	font-family: Georgia, serif;
+	word-wrap: break-word;
+}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 0px; 
+	text-indent:2em;
+}
+
+.was-a-p {
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+	text-indent:2em;
+} 
+
+hr {
+	margin-top: 15px; 
+	margin-bottom: 15px;
+}
+                            
+center,dd,div,dl,dt,li,ol,pre,table,ul,hr,h1,h2,h3,h4,h5,h6 {
+	margin-top: 0px; 
+	margin-bottom: 0px;
+} 
+
+blockquote {
+	text-indent: 0px; 
+	margin-top: 0px; 
+	margin-bottom: 0px;
+} 
+
+ul {
+	list-style-type: disc;
+} 
+
+ol, ul, li .was-a-p {
+	text-indent: 0;
+} 
+
+table.amazon-table-style-0 {
+	border-collapse:collapse;
+	font-size: inherit;
+} 
+
+table.amazon-table-style-0 tr td {
+	border:none; 
+	padding:1px;
+} 
+
+table.amazon-table-style-0 tr th {
+	border:none; 
+	padding:1px; 
+	text-align:justify;
+} 
+
+table.amazon-table-style-1 {
+	border-collapse:collapse; 
+	font-size: inherit;
+} 
+
+table.amazon-table-style-1 tr td {
+	border:1px solid black; 
+	padding:1px;
+} 
+
+table.amazon-table-style-1 tr th {
+	border:1px solid black; 
+	padding:1px; 
+	text-align:justify;
+}
+
+
+/* If mobi8 */ 
+
+body {
+	word-wrap: break-word; 
+	padding: 0px !important;
+} 
+
+.azn-FWURG {
+	-webkit-text-orientation: upright;
+} 
+
+.azn-NTE {
+	-webkit-text-emphasis: none !important;
+} 
+
+.azn-UNB {
+	letter-spacing: 0em !important; 
+	display: inline-block; 
+	text-indent: 0px !important; 
+	-webkit-text-orientation: vertical-right !important;
+}
+                            
+.azn-JPLB {
+	display:inline-block; 
+	text-indent: 0px !important;
+} 
+
+.semiTransparentOverlay {
+	z-index: 10 !important; 
+	opacity: 0.5;
+} 
+
+svg img {
+	display: none;
+} 
+
+.page-break {
+	display:block; 
+	padding:1px;
+} 
+
+.pagebreak {
+	display:block; 
+	padding:1px;
+} 
+
+.defaultHighlight {
+	background-color:#ffff9b;
+} 
+
+.noDisplay {
+	display:none;
+} 
+
+body {
+	cursor: default; 
+	position: relative;
+} 
+
+/* If device supports CSS Regions -> KindleRendererSettings.useCSSRegions() */
+
+.was-a-p {
+	orphans:0;
+	widows:0
+} 
+
+.page-break {
+	break-before:column;
+} 
+
+.pagebreak {
+	break-before:column;
+} 
+
+.renderer-page-break {
+	width:0px; 
+	height:0px; 
+	break-before:always;
+} 
+
+/* If Fixed layout -> KindleRendererSettings.getSettings().fixedContent */
+body {
+	background: none !important; 
+	background-color: transparent !important;
+}
+html, body {
+	width: auto; 
+	height: auto;
+}
+
+
+/* Native Selection KindleRendererSettings.useNativeSelection() */
+body {
+	/* If selectable */
+	-webkit-user-select:text; 
+	-moz-user-select:text; 
+	-ms-user-select:text; 
+}
+body {
+	/* If not selectable */
+	-webkit-user-select:none; 
+	-moz-user-select:none; 
+	-ms-user-select:none;
+}
+
+.kindle-annotation-wrapper, .kindle-annotation-wrapper * {
+	margin: auto; 
+	padding: 0;
+} 
+div#content-overlays {
+	margin: 0px; 
+	padding: 0px;
+}
+
+/* Then the renderer begins Content Sanitization for: 
+- float
+- position
+- width and height (in both % or fixed values — they have an index for that)
+- max-width and max-height (unsupported)
+- font-size
+- line-height
+- background-color
+- text-indent
+- color
+- clear
+- -webkit-text-combine
+- font-family
+- font-style
+- display
+ */
+
+
+/* kindleReaderSanitizationStylesheet
+Here I'll use the syntax "element.property" as in "HTML tag which has the property declared in your CSS" */
+
+el.widths {
+	width: auto;
+}
+
+el.heights {
+	height: auto;
+}
+
+el.display {
+	/* When < 95% */
+	display: inline-block;
+}
+
+el.display {
+	/* When > 95% */
+	display: block;
+}
+
+el.lineHeight {
+	line-height: {value};
+}
+
+el.isPositioned {
+	position: inherit;
+}
+
+/* Now the renderer computes a WCAG-compliant color for text on background */
+el.hasTextColor {
+	color: rgb({x},{y},{z});
+}
+
+el.absFontValue {
+	/* If the font-size is declared using an absolute value */
+	font-size: {value};
+}
+
+el.remFontValue {
+	/* If the font-size is declared using rem value */
+	font-size: {computedValue}px;
+}
+
+el.textIndent {
+	/* If negative text indent */
+	text-indent: -{computedValue}px;
+	padding-left: {computedValue}px;
+}
+
+el.hasClearStyle {
+	clear: none;
+}
+
+el.textCombine {
+	-webkit-text-combine: {value};
+	display: inline-block; 
+	text-indent: 0px; 
+	height: auto;
+}
+
+el.langFontFamily {
+	font-family: {KindleRendererLanguageOptions.getDefaultFont};
+}
+
+el.fontStyle {
+	/* If italic while the language doesn't allow it */
+	font-style: normal;
+}
+
+/* Utilities
+Check file Renderer-utilities.txt	*/
+
+
+
+/* And now, ladies and gentlemen, to the "html-css-sanitizer-minified.js" part 
+
+So, simply, CSS values are declared as groups in a var in the following order:
+Check values.txt for a complete list of values
+
+- [color] (keywords)
+- [cursor]
+- [display]
+- [list-style-type]
+- [font-weight]
+- [font-stretch]
+- [voice-balance] (could be azimuth)
+- [font-size]
+- [white-space]
+- [border-style]
+- [vertical-align]
+- [-webkit-appearance]
+- [voice-rate]
+- [voice-?]
+- [box-sizing]
+- [font-family] (type)
+- [voice-volume]
+- [background-repeat]
+- [text-decoration]
+- [voice-range]
+- [position]
+- [text-transform]
+- [voice-family]
+- [unicode-bidi]
+- [bottom | top]
+- [text-overflow]
+- [speak-as]
+- [empty-cells]
+- [list-style-position]
+- [font-style]
+- [left | right]
+- [direction]
+- follow other values that may be used for several props
+
+
+And then every CSS property is parsed to check whether the value is in their list.
+
+Then they check character encoding (regex to the rescue).
+
+Then they check selectors. 
+(active|after|before|first-child|first-letter|focus|hover) are OK
+(link|visited) are not OK
+
+Then they check media-queries:
+				'braille': allowed,
+                'embossed': allowed,
+                'handheld': allowed,
+                'print': allowed,
+                'projection': allowed,
+                'screen': allowed,
+                'speech': allowed,
+                'tty': allowed,
+                'tv': allowed
+                
+Then they check all fucking HTML: tags, entities et al.
+
+Then, oh look, there goes your JavaScript.
+
+And we're done ¯\_(ツ)_/¯
+*/
+
