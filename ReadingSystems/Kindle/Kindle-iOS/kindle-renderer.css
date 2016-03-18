@@ -274,7 +274,7 @@ div#content-overlays {
 /* Then the renderer begins Content Sanitization on the fly for: 
 - float
 - position
-- width and height (in both % or fixed values — they have an index for that)
+- width and height (in both % or fixed values)
 - max-width and max-height (unsupported)
 - font-size
 - line-height
