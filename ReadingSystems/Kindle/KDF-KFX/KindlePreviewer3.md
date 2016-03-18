@@ -22,7 +22,7 @@ As a reminder, AZK is **not** the file Kindle for iOS uses, it is indeed convert
 
 So, to sum things up, like AZK (and KCR), **KFX is a binary version of JSON** (JavaScript Object Notation). In other words, it is somehow likely the new Kindle renderer is sharing common traits with Kindle Cloud Reader, i.e. JavaScript built on top of jQuery and making use of webviews. That is still unclear though, so correct me if I’m wrong.
 
-KindleGen is not involved at this AZK/KFX conversion any more and there is no “public converter” for those two formats. `EpubToKFXConverter-1.0.jar` is bundled with KindlePreviewer (like `azkcreator` for AZK) but you could probably make use of your command-prompt-fu to access it (see [this post in MobileRead forums](http://www.mobileread.com/forums/showpost.php?p=3262219&postcount=338)).
+Strictly speaking, KindleGen is not longer involved at this AZK/KFX conversion level. And there is no “public converter” for those two formats. `EpubToKFXConverter-1.0.jar` is bundled with KindlePreviewer (like `azkcreator` for AZK) but you could probably make use of your command-prompt-fu to access it (see [this post in MobileRead forums](http://www.mobileread.com/forums/showpost.php?p=3262219&postcount=338)).
 
 ### History
 
