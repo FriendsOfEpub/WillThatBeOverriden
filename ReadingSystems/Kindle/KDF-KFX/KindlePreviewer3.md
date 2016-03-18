@@ -4,7 +4,7 @@ Inquiring further into Kindle Previewer 3 (beta), we may get a hint of the conve
 
 At first sight, the process is epic. Please note [some folks have been retro-engineering already](http://www.mobileread.com/forums/showthread.php?t=263902). I can now confirm their findings. 
 
-I’ll quote from and refer to thats thread’s posts since it would be disrespectful to steal and paraphrase.
+I’ll quote from and refer to that thread’s posts since it would be disrespectful to steal and paraphrase.
 
 **TL;DR:** we’re screwed.
 
@@ -22,7 +22,7 @@ As a reminder, AZK is **not** the file Kindle for iOS uses, it is indeed convert
 
 So, to sum things up, like AZK (and KCR), **KFX is a binary version of JSON** (JavaScript Object Notation). In other words, it is somehow likely the new Kindle renderer is sharing common traits with Kindle Cloud Reader, i.e. JavaScript built on top of jQuery and making use of webviews. That is still unclear though, so correct me if I’m wrong.
 
-Strictly speaking, KindleGen is no longer involved at this AZK/KFX conversion level. And there is no “public converter” for those two formats. `EpubToKFXConverter-1.0.jar` is bundled with KindlePreviewer (like `azkcreator` for AZK) but you could probably make use of your command-prompt-fu to access it (see [this post in MobileRead forums](http://www.mobileread.com/forums/showpost.php?p=3262219&postcount=338)).
+Strictly speaking, KindleGen is no longer involved at this AZK/KFX conversion level. And there is no publicly distributed converter for those two formats. `EpubToKFXConverter-1.0.jar` is bundled with KindlePreviewer (like `azkcreator` for AZK) so you can probably make use of your command-prompt-fu to access it (see [this post in MobileRead forums](http://www.mobileread.com/forums/showpost.php?p=3262219&postcount=338)).
 
 ### History
 
@@ -31,11 +31,11 @@ It looks like KFX has been around [since 2013](http://www.mobileread.com/forums/
 ### Technical details
 
 - Like KF8, KFX is using a webkit-based rendering engine.
-- Contents (excepted images) are encrypted/ofbuscated (AES-256) for both non- and DRM-protected files.
+- Contents (excepted images) are encrypted/ofbuscated (AES-256) for both DRM-protected **and** -free files.
 - Contents are divided into small JSON files (like AZK and KCR, you can [go check online](https://www.amazon.com/cloudreader) for the latter).
 - Grayscale images are using an high compression format called JPEG-XR (transparency is not supported at the moment).
-- Color images are delivered in JPEG (at least for iOS).
-- It **seems** specific versions are prepared and delivered based on devices (e.g. grayscale images for eInk Readers).
+- Color images are delivered in JPEG (at least in iOS).
+- It **seems** specific versions are prepared and delivered depending on device (e.g. grayscale images for eInk Readers).
 - Hyphens are turned on/off using `-webkit-hyphens`.
 - The hyphenation engine is [not written in JavaScript](http://www.mobileread.com/forums/showpost.php?p=3206602&postcount=237).
 
@@ -47,11 +47,11 @@ KFX brings support for drop caps, hyphenation & justification (H&J), kerning, li
 
 What they don’t advertise though, are clever features that will enhance the user experience:
 
-- the renderer takes user settings into account and will adapt drop caps, H&J and `float` images dynamically, depending on font size;
+- the renderer takes user settings into account and will adapt drop caps, H&J and `float` images dynamically once a critical font size is reached;
 - the renderer supports gaiji images (`inline` images);
 - the renderer computes an RGAA2-compliant contrast ratio: `color` for text on background.
 
-As the previous renderer (for KF8) [performed very poorly with kerning and ligatures](http://www.mobileread.com/forums/showpost.php?p=3172282&postcount=420), it could explain why they decided to build a new one and manage a lot of stuff when processing files so that the new renderer don’t have to. 
+As the previous renderer (for KF8) [performed very poorly with kerning and ligatures](http://www.mobileread.com/forums/showpost.php?p=3172282&postcount=420), it could explain why they decided to build a new one and manage a lot of stuff when processing files so that the new renderer doesn’t have to. 
 
 While this is **pure speculation**, another goal may have been the creation of a stronger walled garden. Indeed, it looks like it would be pretty useless to convert KFX to ePub (more about that later).
 
@@ -76,9 +76,9 @@ And indeed, that process is mind-blowing.
 
 When converting a file with Kindle Previewer, which takes some time (yeah, that’s `coreprocessor` in action), temporary files are created. To sum things up:
 
-- the link to the external stylesheet(s) are erased (`head`);
-- book styles are parsed and inlined (`style` attribute) to each tag;
-- computed styles are then inlined (`computedstyle` attribute) as well.
+- the link to the external stylesheets are erased (`head`);
+- book styles are parsed and inlined to each tag (`style` attribute);
+- computed styles are then inlined as well (`computedstyle` attribute).
 
 You end up with something like this: 
 
@@ -100,7 +100,7 @@ The purpose of such an “enhancement” is currently unknown. The most probable
 
 Indeed, “Html and css files are replaced by text with associated formatting instructions in binary data structures. The possible formatting instructions are based loosely on css properties, but changed and somewhat simplified.”
 
-As for drop caps, Amzn has created its own non-standard style properties which are being applied after several conditions have been met (e.g. it is not a floating image, `span` is the first element in `p`, paragraph is the first element of the parent, `font-size` of the `span` is bigger than `font-size` of `p`, it is not a raised cap, etc.). As a matter of fact, that’s quite epic.
+As regards drop caps, Amzn has created its own non-standard style properties which are being applied after several conditions have been met (e.g. it is not a floating image, `span` is the first element in `p`, paragraph is the first element of the parent, `font-size` of the `span` is bigger than `font-size` of `p`, it is not a raised cap, etc.). As a matter of fact, that’s quite epic.
 
 And now to the **ion** data representation…
 
@@ -113,7 +113,7 @@ To sum things up, content is divided into fragments, and I quote jhowell:
 3. a story contains a list of content, content types being based on HTML e.g. `container` for nested `div`, `text` for `div`, `p`, `h1`, etc.;
 4. formatting instructions are grouped into a `style` based on HTML attributes and CSS properties.
 
-**Note:** if the parser encounters an unsupported style, it will abort conversion to KDF. A list of currently unsupported styles would be difficult to create if it doesn’t exist already, somewhere in KP3.
+**Note:** if the parser encounters any unsupported style, it aborts conversion to KDF. A list of currently unsupported styles would be difficult to create if it doesn’t exist already, somewhere in KP3.
 
 ## KFX to ePub
 
@@ -125,7 +125,7 @@ You’re screwed.
 
 ## What’s next?
 
-Well, Amazon is very secretive about KFX and is unlikely to document it, if not providing a public converter you can use to create files in this format. After all, in [Kindle Previewer 3 FAQ](http://www.amazon.com/gp/feature.html/?docId=1003018611), they write “You can’t side load your books with Enhanced Typesetting.” That may be temporary but since KFX is a work in progress (WIP), it seems reasonable to imagine they’ll manage that on their side—a lot easier to update your own server and reprocess files when needed than managing tens of thousands of people using a local/native converter to provide KFX files directly.
+Well, Amazon is very secretive about KFX and is unlikely to document it, if not providing a public converter you can use to create files in this format. After all, in [Kindle Previewer 3 FAQ](http://www.amazon.com/gp/feature.html/?docId=1003018611), they write “You can’t side load your books with Enhanced Typesetting.” That may be temporary but since KFX is a work in progress (WIP), it seems reasonable to imagine they’ll manage that on their side for a while—a lot easier to update your own server and reprocess files when needed than to manage tens of thousands of people using a local/native converter to upload KFX files directly.
 
 So, given this status of WIP, the whole process which turns documenting and maintaining default styles + overrides into a bloody nightmare and the dynamic sanitization/styling which probably happens at the renderer level, **we won’t inquire further.** Sorry Not Sorry, life is short and I don’t want to waste any more time on this one.
 
