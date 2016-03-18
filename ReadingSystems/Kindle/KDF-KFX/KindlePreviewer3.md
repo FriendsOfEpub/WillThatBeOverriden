@@ -106,6 +106,8 @@ And now to the **ion** data representation…
 
 I don’t really want to make it obscure so if you want further details, check [this post](http://www.mobileread.com/forums/showpost.php?p=3269649&postcount=360).
 
+You can also check `ionnames.csv` ([link](https://github.com/FriendsOfEpub/WillThatBeOverriden/blob/master/ReadingSystems/Kindle/KDF-KFX/ionnames.csv)). You’ll see `epub:type` and CSS properties + values in there so maybe we could build a list of supported styles from here.
+
 To sum things up, content is divided into fragments, and I quote jhowell: 
 
 1. `document_data`, a list of sections in reading order;
