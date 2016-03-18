@@ -18,7 +18,7 @@ It seems KFX is a follow-on AZK, the Kindle format for iOS you’ll get when usi
 
 More technical details about AZK [here](http://www.mobileread.com/forums/showpost.php?p=3097967&postcount=8) and [there](http://www.mobileread.com/forums/showpost.php?p=3100761&postcount=11).
 
-As a reminder, AZK is **not** the file Kindle for iOS uses, it is indeed converted to KCR (Kindle Cloud Reader) when you sideload it on your iDevice. [This process has been partly documented](https://github.com/FriendsOfEpub/WillThatBeOverriden/tree/master/ReadingSystems/Kindle/Kindle-iOS) and implies a lot of HTML + CSS sanitization.
+As a reminder, AZK is **not** the file Kindle for iOS uses, it is indeed converted to KCR (Kindle Cloud Reader) when you sideload it on your iDevice. [Kindle Cloud Reader for iOS has been partly documented](https://github.com/FriendsOfEpub/WillThatBeOverriden/tree/master/ReadingSystems/Kindle/Kindle-iOS) and implies a lot of HTML + CSS sanitization.
 
 So, to sum things up, like AZK (and KCR), **KFX is a binary version of JSON** (JavaScript Object Notation). In other words, it is somehow likely the new Kindle renderer is sharing common traits with Kindle Cloud Reader, i.e. JavaScript built on top of jQuery and making use of webviews. That is still unclear though, so correct me if I’m wrong.
 
@@ -76,7 +76,7 @@ And indeed, that process is mind-blowing.
 
 When converting a file with Kindle Previewer, which takes some time (yeah, that’s `coreprocessor` in action), temporary files are created. To sum things up:
 
-- the link to the external stylesheets are erased (`head`);
+- the link to the external stylesheets is erased (`head`);
 - book styles are parsed and inlined to each tag (`style` attribute);
 - computed styles are then inlined as well (`computedstyle` attribute).
 
@@ -100,7 +100,7 @@ The purpose of such an “enhancement” is currently unknown. The most probable
 
 Indeed, “Html and css files are replaced by text with associated formatting instructions in binary data structures. The possible formatting instructions are based loosely on css properties, but changed and somewhat simplified.”
 
-As regards drop caps, Amzn has created its own non-standard style properties which are being applied after several conditions have been met (e.g. it is not a floating image, `span` is the first element in `p`, paragraph is the first element of the parent, `font-size` of the `span` is bigger than `font-size` of `p`, it is not a raised cap, etc.). As a matter of fact, that’s quite epic.
+As regards drop caps, Amzn has created its own non-standard style properties which are being applied after several conditions have been met (e.g. it is not a floating image, `span` is the first element in `p`, paragraph is the first element of the parent, `font-size` of the `span` is bigger than `font-size` of `p`, it is not a raised cap, etc.). As a matter of fact, that’s quite epic in itself.
 
 And now to the **ion** data representation…
 
@@ -121,13 +121,15 @@ You’re screwed.
 
 1. KFX is encrypted and there is no way to break it at the moment.
 2. HTML semantic markup is lost (`text` for several tags, same for `list`, same for inline elements like `em`, etc.).
-3. Formatting relies heavily on styles and not semantic tags.
+3. “Structure” relies heavily on styles and not semantic tags—and there goes your basic a11y.
 
 ## What’s next?
 
-Well, Amazon is very secretive about KFX and is unlikely to document it, if not providing a public converter you can use to create files in this format. After all, in [Kindle Previewer 3 FAQ](http://www.amazon.com/gp/feature.html/?docId=1003018611), they write “You can’t side load your books with Enhanced Typesetting.” That may be temporary but since KFX is a work in progress (WIP), it seems reasonable to imagine they’ll manage that on their side for a while—a lot easier to update your own server and reprocess files when needed than to manage tens of thousands of people using a local/native converter to upload KFX files directly.
+Well, Amazon is very secretive about KFX and is unlikely to document it, if not providing a public converter you can use to create files in this format. After all, in [Kindle Previewer 3 FAQ](http://www.amazon.com/gp/feature.html/?docId=1003018611), they write “You can’t side load your books with Enhanced Typesetting.” 
 
-So, given this status of WIP, the whole process which turns documenting and maintaining default styles + overrides into a bloody nightmare and the dynamic sanitization/styling which probably happens at the renderer level, **we won’t inquire further.** Sorry Not Sorry, life is short and I don’t want to waste any more time on this one.
+That may be temporary but since KFX is a work in progress (WIP), it seems reasonable to imagine they’ll manage that on their side for a while—it is a lot easier to update your own server and reprocess files when needed than to manage tens of thousands of people using a local/native converter to upload KFX files directly.
+
+So, given this status of WIP, the whole process which turns documenting and maintaining default styles + overrides into a bloody nightmare, and the dynamic sanitization/styling which probably happens at the renderer level, **we won’t inquire further.** Sorry Not Sorry, life is short and I don’t want to waste any more time on this one.
 
 You could try public shaming them to get documentation but I’m not convinced it would have any effect—remember AZK has not been documented either and it’s been years since its release.
 
