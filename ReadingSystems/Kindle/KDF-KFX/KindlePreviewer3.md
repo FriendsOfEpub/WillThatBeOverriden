@@ -49,7 +49,7 @@ What they don’t advertise though, are clever features that will enhance the us
 
 - the renderer takes user settings into account and will adapt drop caps, H&J and `float` images dynamically once a critical font size is reached;
 - the renderer supports gaiji images (`inline` images);
-- the renderer computes an RGAA2-compliant contrast ratio: `color` for text on background.
+- the renderer computes an WCAG2-compliant contrast ratio: `color` for text on background.
 
 As the previous renderer (for KF8) [performed very poorly with kerning and ligatures](http://www.mobileread.com/forums/showpost.php?p=3172282&postcount=420), it could explain why they decided to build a new one and manage a lot of stuff when processing files so that the new renderer doesn’t have to. 
 
