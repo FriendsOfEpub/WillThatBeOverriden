@@ -2,7 +2,10 @@
 	Legacy Mobi (v6 + v7)
 	
 	Consistent with an unstyled document 
-	rendered in Kindle Previewer 2.94.	
+	rendered in Kindle Previewer 2.94.
+	
+	For a sorta CSS reference, 
+	see https://www.w3.org/TR/REC-html32	
 												*/
 										
 body {
@@ -31,7 +34,14 @@ hr {
 /* 	At this point, the margin reset for headings, tables, blockquotes, 
 	etc. is beyond comprehension. Why degrade vertical rhythm so much?
 	Or maybe they have chosen this nuclear option in order to deal with 
-	manual paragraph jumps and margins? (cf. Word files from self-pubs)  	*/
+	manual paragraph jumps and margins? (cf. Word files from self-pubs)
+	
+	[UPDATE] OK, see example.html, they’re just managing margins using
+	attribute height (-top in element, -bottom using a div).
+	Example: 
+	<h2 height="3em" width="0"><font size="4"><b>Qui impose le rythme, explicite</b></font></h2>
+      <div height="2em"></div>
+      	 																							*/
             
 center,dd,div,dl,dt,li,ol,pre,table,ul,hr,h1,h2,h3,h4,h5,h6 {
 	margin-top: 0px; 
@@ -102,3 +112,27 @@ img.widths {
 img.heights {
 	height: auto;
 }
+
+/*	Notes (CSS -> HTML) 
+
+  for bold and italic 
+	font-weight: bold -> <b>el</b>
+ 	font-style: italic -> <i>el</i>	
+ 	
+  for font-size
+ 	25% or 0.25em -> <font size="+1 | -1">
+ 	font-size: medium -> <font size="4">
+ 
+  for text-align
+ 	text-align: center ->  align="center"
+ 	text-align: right -> align="right"
+ 	
+  for text-indent
+  	text-indent: 5%; -> width="5%"
+ 	
+  for table
+  	border: none ->  border="0"
+  	
+  Misc
+  	new XHTML file -> <mbp:pagebreak/>
+ 											*/
