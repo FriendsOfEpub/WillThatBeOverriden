@@ -34,10 +34,11 @@
 
 /* content body */
 {{if css_themeShouldInvertContent}}
+
     :root[__ibooks_internal_theme={{.css_themeIdentifier}}] {
     background-color: {{.css_themeContentBackgroundColor}} !important;
     }
-    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] * {
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] *:not(a) {
     background-color: transparent !important;
     color: {{.css_themeContentTextColor}} !important;
     }
@@ -45,29 +46,49 @@
     fill: {{.css_themeContentTextColor}} !important;
     stroke: none !important;
     }
+
+    /* Links - colors from theme - always override when inverted */
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a {
+    color: #{{.css_themeLinkColor}} !important;
+    }
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:link,
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:visited,
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:link *,
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:visited * {
+    color: #{{.css_themeLinkColor}} !important;
+    }
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:active,
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:active * {
+    color: #{{.css_themeLinkColor}} !important;
+    }
+
 {{else}}
+
     /* apply body styles to the root too in case the document has no body */
     :root[__ibooks_internal_theme={{.css_themeIdentifier}}],
     :root[__ibooks_internal_theme={{.css_themeIdentifier}}] body {
     background-color: {{.css_themeContentBackgroundColor}};
     color: {{.css_themeContentTextColor}};
     }
+
+    /* Links - colors from theme - do not override what an author sets */
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a {
+    color: #{{.css_themeLinkColor}};
+    }
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:link,
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:visited,
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:link *,
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:visited * {
+    color: #{{.css_themeLinkColor}};
+    }
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:active,
+    :root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:active * {
+    color: #{{.css_themeLinkColor}};
+    }
+
+
 {{end css_themeShouldInvertContent}}
 
-/* Links - colors from theme */
-:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a {
-color: #{{.css_themeLinkColor}};
-}
-:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:link,
-:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:visited,
-:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:link *,
-:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:visited * {
-color: #{{.css_themeLinkColor}} !important;
-}
-:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:active,
-:root[__ibooks_internal_theme={{.css_themeIdentifier}}] a:active * {
-color: #{{.css_themeLinkColor}} !important;
-}
 {{end range themes}}
 /* End Themes */
 

@@ -87,7 +87,7 @@
 			<key>fontFamily</key>
 			<string>Athelas</string>
 			<key>postscriptBoldName</key>
-			<string>Helvetica</string>
+			<string>Athelas-Bold</string>
 			<key>settings</key>
 			<array>
 				<dict>
@@ -168,7 +168,7 @@
 			<key>fontFamily</key>
 			<string>Charter</string>
 			<key>postscriptBoldName</key>
-			<string>Helvetica</string>
+			<string>Charter-Bold</string>
 			<key>settings</key>
 			<array>
 				<dict>
@@ -577,7 +577,7 @@
 			<key>fontFamily</key>
 			<string>Seravek</string>
 			<key>postscriptBoldName</key>
-			<string>Helvetica</string>
+			<string>Seravek-Bold</string>
 			<key>settings</key>
 			<array>
 				<dict>
