@@ -115,6 +115,9 @@ img.heights {
 
 /*	Notes (CSS -> HTML) 
 
+  for margin-left
+  	p {margin-left: 2em} -> p > blockquote (see line 73 of example.html)
+
   for bold and italic 
 	font-weight: bold -> <b>el</b>
  	font-style: italic -> <i>el</i>	
