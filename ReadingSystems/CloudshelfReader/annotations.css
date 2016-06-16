@@ -1,0 +1,78 @@
+/* Remove grey tap highlight in WebKit */
+input, textarea, button, select, a, html, body, div {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html[data-theme="night-theme"], html[data-theme="night-theme"] body, html[data-theme="night-theme"] div, html[data-theme="night-theme"] span, html[data-theme="night-theme"] h1, html[data-theme="night-theme"] h2, html[data-theme="night-theme"] h3, html[data-theme="night-theme"] h4, html[data-theme="night-theme"] h5, html[data-theme="night-theme"] h6, html[data-theme="night-theme"] p, html[data-theme="night-theme"] blockquote, html[data-theme="night-theme"] pre, html[data-theme="night-theme"] a, html[data-theme="night-theme"] abbr, html[data-theme="night-theme"] acronym, html[data-theme="night-theme"] address, html[data-theme="night-theme"] big, html[data-theme="night-theme"] cite, html[data-theme="night-theme"] code, html[data-theme="night-theme"] em, html[data-theme="night-theme"] small, html[data-theme="night-theme"] strike, html[data-theme="night-theme"] strong, html[data-theme="night-theme"] sub, html[data-theme="night-theme"] sup, html[data-theme="night-theme"] b, html[data-theme="night-theme"] u, html[data-theme="night-theme"] i, html[data-theme="night-theme"] center, html[data-theme="night-theme"] dl, html[data-theme="night-theme"] dt, html[data-theme="night-theme"] dd, html[data-theme="night-theme"] ol, html[data-theme="night-theme"] ul, html[data-theme="night-theme"] li, html[data-theme="night-theme"] fieldset, html[data-theme="night-theme"] form, html[data-theme="night-theme"] label, html[data-theme="night-theme"] legend, html[data-theme="night-theme"] table, html[data-theme="night-theme"] caption, html[data-theme="night-theme"] tbody, html[data-theme="night-theme"] tfoot, html[data-theme="night-theme"] thead, html[data-theme="night-theme"] tr, html[data-theme="night-theme"] th, html[data-theme="night-theme"] td, html[data-theme="night-theme"] article, html[data-theme="night-theme"] aside, html[data-theme="night-theme"] footer, html[data-theme="night-theme"] header, html[data-theme="night-theme"] nav, html[data-theme="night-theme"] section {
+    background-color: #141414 !important;
+    color: white !important;
+}
+/*html[data-theme="default-theme"], html[data-theme="default-theme"] body, html[data-theme="default-theme"] div, html[data-theme="default-theme"] span, html[data-theme="default-theme"] h1, html[data-theme="default-theme"] h2, html[data-theme="default-theme"] h3, html[data-theme="default-theme"] h4, html[data-theme="default-theme"] h5, html[data-theme="default-theme"] h6, html[data-theme="default-theme"] p, html[data-theme="default-theme"] blockquote, html[data-theme="default-theme"] pre, html[data-theme="default-theme"] a, html[data-theme="default-theme"] abbr, html[data-theme="default-theme"] acronym, html[data-theme="default-theme"] address, html[data-theme="default-theme"] big, html[data-theme="default-theme"] cite, html[data-theme="default-theme"] code, html[data-theme="default-theme"] em, html[data-theme="default-theme"] small, html[data-theme="default-theme"] strike, html[data-theme="default-theme"] strong, html[data-theme="default-theme"] sub, html[data-theme="default-theme"] sup, html[data-theme="default-theme"] b, html[data-theme="default-theme"] u, html[data-theme="default-theme"] i, html[data-theme="default-theme"] center, html[data-theme="default-theme"] dl, html[data-theme="default-theme"] dt, html[data-theme="default-theme"] dd, html[data-theme="default-theme"] ol, html[data-theme="default-theme"] ul, html[data-theme="default-theme"] li, html[data-theme="default-theme"] fieldset, html[data-theme="default-theme"] form, html[data-theme="default-theme"] label, html[data-theme="default-theme"] legend, html[data-theme="default-theme"] table, html[data-theme="default-theme"] caption, html[data-theme="default-theme"] tbody, html[data-theme="default-theme"] tfoot, html[data-theme="default-theme"] thead, html[data-theme="default-theme"] tr, html[data-theme="default-theme"] th, html[data-theme="default-theme"] td, html[data-theme="default-theme"] article, html[data-theme="default-theme"] aside, html[data-theme="default-theme"] footer, html[data-theme="default-theme"] header, html[data-theme="default-theme"] nav, html[data-theme="default-theme"] section {*/
+/*    background-color: white !important;*/
+/*    color: black !important;*/
+/*}*/
+html[data-theme="parchment-theme"], html[data-theme="parchment-theme"] body, html[data-theme="parchment-theme"] div, html[data-theme="parchment-theme"] span, html[data-theme="parchment-theme"] h1, html[data-theme="parchment-theme"] h2, html[data-theme="parchment-theme"] h3, html[data-theme="parchment-theme"] h4, html[data-theme="parchment-theme"] h5, html[data-theme="parchment-theme"] h6, html[data-theme="parchment-theme"] p, html[data-theme="parchment-theme"] blockquote, html[data-theme="parchment-theme"] pre, html[data-theme="parchment-theme"] a, html[data-theme="parchment-theme"] abbr, html[data-theme="parchment-theme"] acronym, html[data-theme="parchment-theme"] address, html[data-theme="parchment-theme"] big, html[data-theme="parchment-theme"] cite, html[data-theme="parchment-theme"] code, html[data-theme="parchment-theme"] em, html[data-theme="parchment-theme"] small, html[data-theme="parchment-theme"] strike, html[data-theme="parchment-theme"] strong, html[data-theme="parchment-theme"] sub, html[data-theme="parchment-theme"] sup, html[data-theme="parchment-theme"] b, html[data-theme="parchment-theme"] u, html[data-theme="parchment-theme"] i, html[data-theme="parchment-theme"] center, html[data-theme="parchment-theme"] dl, html[data-theme="parchment-theme"] dt, html[data-theme="parchment-theme"] dd, html[data-theme="parchment-theme"] ol, html[data-theme="parchment-theme"] ul, html[data-theme="parchment-theme"] li, html[data-theme="parchment-theme"] fieldset, html[data-theme="parchment-theme"] form, html[data-theme="parchment-theme"] label, html[data-theme="parchment-theme"] legend, html[data-theme="parchment-theme"] table, html[data-theme="parchment-theme"] caption, html[data-theme="parchment-theme"] tbody, html[data-theme="parchment-theme"] tfoot, html[data-theme="parchment-theme"] thead, html[data-theme="parchment-theme"] tr, html[data-theme="parchment-theme"] th, html[data-theme="parchment-theme"] td, html[data-theme="parchment-theme"] article, html[data-theme="parchment-theme"] aside, html[data-theme="parchment-theme"] footer, html[data-theme="parchment-theme"] header, html[data-theme="parchment-theme"] nav, html[data-theme="parchment-theme"] section {
+    background-color: #e7dec7 !important;
+    color: #5d4232 !important;
+}
+
+html {
+    -webkit-text-size-adjust: 100%; /* Never autoresize text */
+    -webkit-user-select: text; /* Disable block-level selection */
+}
+
+body > img, body > div {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body > * {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+body > img, body > div {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* The z-index is to ensure that the bookmark is accessible even if it's overlayed on a highlight/underline of some type */
+.comment {
+    background-image : url("/images/comment_clickable_icon.png");
+    background-repeat : no-repeat;
+    opacity : 0.5;
+    z-index : 10;
+}
+
+html div.bookmark {
+    top : "0px";
+    right : "0px";
+    background-color: #ff0 !important;
+}
+
+html div.highlight {
+    opacity: 0.2;
+    background-color: #ff0 !important;
+    z-index: 1;
+}
+
+.underline-range {
+    position: absolute;
+}
+
+html .underline-range > .underline {
+    position: relative;
+    height: 15%;
+    opacity: 0.2;
+    background-color: #ff0 !important;
+}
+
+html .underline-range > .transparent-part {
+    position: relative;
+    height: 85%;
+    background-color: transparent !important;
+}
+
+.cfi-marker {
+    display: inline-block;
+}
