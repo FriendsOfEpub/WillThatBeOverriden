@@ -1,0 +1,11 @@
+body {
+    -webkit-filter: invert(1) hue-rotate(180deg);
+    -webkit-transform: translateZ(0);
+    background-color: white;
+}
+
+img, video {
+    -webkit-filter: invert(1) hue-rotate(180deg) contrast(60%) saturate(1.6);
+    -webkit-transform: translateZ(0);
+}
+
