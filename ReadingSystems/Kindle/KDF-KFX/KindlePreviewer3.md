@@ -105,7 +105,7 @@ As regards drop caps, Amzn has created its own non-standard style properties whi
 
 And now to the **ion** data representation…
 
-[Here is Amazon Labs’ documentation.](https://amznlabs.github.io/ion-docs/)
+[Here is Amazon Labs’ documentation](https://amznlabs.github.io/ion-docs/) and here is [the JavaScript implementation](https://github.com/amzn/ion-js).
 
 I don’t really want to make it obscure so if you want further details, check [this post](http://www.mobileread.com/forums/showpost.php?p=3269649&postcount=360).
 
