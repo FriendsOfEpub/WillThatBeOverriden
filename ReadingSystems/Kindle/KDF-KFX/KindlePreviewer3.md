@@ -78,6 +78,7 @@ When converting a file with Kindle Previewer, which takes some time (yeah, that�
 
 - the link to the external stylesheets is erased (`head`);
 - book styles are parsed and inlined to each tag (`style` attribute);
+- the book is entirely rendered in phantom.js in order to compute styles;
 - computed styles are then inlined as well (`computedstyle` attribute).
 
 You end up with something like this: 
@@ -103,6 +104,8 @@ Indeed, “Html and css files are replaced by text with associated formatting in
 As regards drop caps, Amzn has created its own non-standard style properties which are being applied after several conditions have been met (e.g. it is not a floating image, `span` is the first element in `p`, paragraph is the first element of the parent, `font-size` of the `span` is bigger than `font-size` of `p`, it is not a raised cap, etc.). As a matter of fact, that’s quite epic in itself.
 
 And now to the **ion** data representation…
+
+[Here is Amazon Labs’ documentation.](https://amznlabs.github.io/ion-docs/)
 
 I don’t really want to make it obscure so if you want further details, check [this post](http://www.mobileread.com/forums/showpost.php?p=3269649&postcount=360).
 
